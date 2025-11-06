@@ -37,11 +37,11 @@ sea_snake <- read("data/Aipysurine_sex_dimorphism_for_Dryad2.xlsx")
 # Etape 3 : Nettoyage des données  ----------------------------------------
 sea_snake %>.%
 sfilter(., 
-  `genus` != "Aipysu+C370rus" , `Tail length (cm)`> 0, `tail width (max)`> 0, `head length (mm)`> 0, `head width (mm)`> 0, `eye diam. (mm)`> 0 ) -> sea_snake_propre
+  `genus` != "Aipysu+C370rus" , `Tail length (cm)`> 0, `tail width (max)`> 0, `head length (mm)`> 0, `head width (mm)`> 0, `eye diam. (mm)`> 0 ) -> sea_snake1
 
 # Etape 4 : Ajout des labels et des unités --------------------------------
 
-sea_snake_propre <- labelise(sea_snake_propre,
+sea_snake1 <- labelise(sea_snake1,
   label = list(
     `genus` = "genre",
     `species` = "espèce",
@@ -73,5 +73,5 @@ sea_snake_propre <- labelise(sea_snake_propre,
 
 # Etape 5 : Sauvegarde locale des données retravaillées -------------------
 
-save(sea_snake_propre, file = "sea_snake_propre.rds")
-file_move("sea_snake_propre.rds", "data/sea_snake_propre.rds")
+save(sea_snake1, file = "sea_snake1.rds")
+file_move("sea_snake1.rds", "data/sea_snake1.rds")
