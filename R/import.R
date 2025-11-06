@@ -39,36 +39,41 @@ sea_snake %>.%
 sfilter(., 
   `genus` != "Aipysu+C370rus" , `Tail length (cm)`> 0, `tail width (max)`> 0, `head length (mm)`> 0, `head width (mm)`> 0, `eye diam. (mm)`> 0 ) -> sea_snake1
 
+sea_snake1<-janitor::clean_names(sea_snake1) 
+sea_snake1 <-srename(sea_snake1, svl = svl_cm , head_length = head_length_mm , tail_length = tail_length_cm , head_width = head_width_mm , body_width = body_width_cm , eye_diam = eye_diam_mm)
+
 # Etape 4 : Ajout des labels et des unités --------------------------------
 
 sea_snake1 <- labelise(sea_snake1,
   label = list(
-    `genus` = "genre",
-    `species` = "espèce",
-    `MUSEUM` = "musée",
-    `Museum Rego No` = "id du musée",
-    `SVL (cm)` = "longueur museau-cloaque",
-    `Tail length (cm)` = "longueur de la queue",
-    `tail width (max)` = "largeur de la queue",
-    `head length (mm)` = "longueur de la tête",
-    `body width (cm)` = "largeur du corps",
-    `eye diam. (mm)`= "diamètre de l'œuil",
-    `Sex` = "sexe",
-    `Adult?`= "adulte ?"
+    genus = "genre",
+    species = "espèce",
+    museum = "musée",
+    museum_rego_no = "id du musée",
+    svl = "longueur museau-cloaque",
+    tail_length = "longueur de la queue",
+    tail_width_max = "largeur de la queue",
+    head_length = "longueur de la tête",
+    head_width = "largeur de la tête",
+    body_width = "largeur du corps",
+    eye_diam= "diamètre de l'œuil",
+    sex = "sexe",
+    adult= "adulte ?"
       ),
   units = list(
-    `genus` = NA,
-    `species`= NA,
-    `MUSEUM` = NA,
-    `Museum Rego No` = NA,
-    `SVL (cm)` = "cm",
-    `Tail length (cm)` = "cm",
-    `tail width (max)` = "max",
-    `head length (mm)` = "mm",
-    `body width (cm)` = "cm",
-    `eye diam. (mm)`= "mm",
-    `Sex` = NA,
-    `Adult?`= NA
+    genus = NA,
+    species = NA,
+    museum = NA,
+    museum_rego_no = NA,
+    svl = "cm",
+    tail_length = "cm",
+    tail_width_max = "max",
+    head_length = "mm",
+    head_width = "mm",
+    body_width = "cm",
+    eye_diam = "mm",
+    sex = NA,
+    adult = NA
   ))
 
 # Etape 5 : Sauvegarde locale des données retravaillées -------------------
