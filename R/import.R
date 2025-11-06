@@ -72,6 +72,5 @@ sea_snake1 <- labelise(sea_snake1,
   ))
 
 # Etape 5 : Sauvegarde locale des données retravaillées -------------------
+write$rds(sea_snake1, "data/sea_snake1.rds")
 
-save(sea_snake1, file = "sea_snake1.rds")
-file_move("sea_snake1.rds", "data/sea_snake1.rds")

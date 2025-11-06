@@ -1,5 +1,5 @@
 ---
-title: "___"
+title: "Dimorphisme sexuel chez les serpents de mer"
 author: "Léa Brohez, Amélie Pierson, Théa Rousseau, Pierre Martin"
 format:
   html:
@@ -40,16 +40,16 @@ if (!"tools:tests" %in% search())
 knitr::opts_chunk$set(dev = "ragg_png")
 
 # Configuration de l'environnement
-
+SciViews::R("model", lang = "fr")
 ```
 
 <!--% Importez les données que vous aurez préalablement nettoyées, remaniées et labélisées dans le script R nommé `R/import.R`. -->
 
 ```{r import}
 # Lecture des données
-___ <- ___
+sea_snake1 <- read$rds("data/sea_snake1.rds")
 # Tableau des premières et dernières lignes
-tabularise$headtail(___)
+tabularise$headtail(sea_snake1)
 ```
 
 ### Description des données
