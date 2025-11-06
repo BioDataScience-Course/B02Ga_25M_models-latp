@@ -73,3 +73,5 @@ sea_snake_propre <- labelise(sea_snake_propre,
 
 # Etape 5 : Sauvegarde locale des données retravaillées -------------------
 
+save(sea_snake_propre, file = "sea_snake_propre.rds")
+file_move("sea_snake_propre.rds", "data/sea_snake_propre.rds")
