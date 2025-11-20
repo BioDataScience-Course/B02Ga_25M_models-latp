@@ -67,7 +67,12 @@ tabularise$headtail(sea_snake1)
 <!--% Graphique et interprétation de l'étudiant #2 ci-dessous. -->
 
 ```{r chart2}
-
+#chart(data = sea_snake1, body_width ~ svl %col=% sex %shape=% genus | species ) +
+#geom_point()
+chart(data = sea_snake1, body_width ~ svl %col=% species %shape=% sex | genus ) +
+  geom_point(alpha = 0.5)
+#chart(data = sea_snake1, ~ body_width %fill=% species %shape=% sex | genus) + 
+#geom_bar()
 ```
 
 ... interprétation #2...
@@ -125,7 +130,15 @@ chart(data = sea_snake1, eye_diam ~ head_width %col=% sexe_et_age | nom_scientif
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
-```{r}
+```{rmodel1Lea-Amelie}
+
+```
+
+```{rgrapmodel1Lea-Amelie}
+
+```
+
+```{rresiduals1Lea-Amelie}
 
 ```
 
@@ -141,7 +154,15 @@ chart(data = sea_snake1, eye_diam ~ head_width %col=% sexe_et_age | nom_scientif
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-```{r}
+```{rGLM(M)1Lea-Amelie}
+
+```
+
+```{rgraphGLM(M)1Lea-Amelie}
+
+```
+
+```{rresidualsGLM(M)1Lea-Amelie}
 
 ```
 
