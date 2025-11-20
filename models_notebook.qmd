@@ -121,11 +121,11 @@ summary(snale_lm1) |> tabularise()
 ```
 
 ```{r}
-
+chart(snake_lm1)
 ```
 
 ```{r}
-
+chart$residuals(snake_lm1)
 ```
 
 #### Régression linéaire 2
