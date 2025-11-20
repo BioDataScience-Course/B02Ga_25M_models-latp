@@ -76,8 +76,8 @@ chart(data=sea_snake1, tail_length~tail_width_max %col=% sex |species  )+
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
 ```{r chart3}
-#chart(data = sea_snake1, `SVL (cm)` ~ `Tail length (cm)` %col=% species) +
-  #geom_point()
+chart(data = sea_snake1, head_length ~ head_width %col=% sex | species) +
+  geom_point()
 ```
 
 ... interprétation #3...
@@ -119,7 +119,9 @@ chart(data = sea_snake1, eye_diam ~ head_width %col=% sexe_et_age | nom_scientif
 <!--% Ajustez une régression linéaire simple, multiple ou polynomiale par paire d'étudiants dans cette section (donc, deux modèles pour l'équipe de quatre). -->
 
 ```{r}
-
+snake_lm2 <- lm(data = sea_snake1, eye_diam ~ head_length)
+tabularise(summary(snake_lm2))
+chart(snake_lm2)
 ```
 
 #### Modèle linéaire 1
