@@ -21,7 +21,7 @@ bibliography: references.bib
 
 <!--% Rédigez une courte introduction de 3 ou 5 phrases qui présente vos données. Ajoutez une phrase de but (que vous remanierez éventuellement en fonction des modèles que vous ajouterez plus tard). Vous pouvez citer la bibliographie en utilisant le formatage Markdown ad hoc et en incluant votre référence au format bibtex dans le fichier references.bib. -->
 
-La transition évolutive de la vie terrestre à la vie aquatique à transformé la morphologie et l'écologie de beaucoup d'espèces de serpents marins. Notamment chez les serprents hydrophiines élapidés et plus précisément les serpents aipysurine des genres *Emydocephalus* et *Aipysurus*, chez qui l'adaptation à la vie marine aurait pu modifier la sélection naturelle et sexuelle. Ces différents changements s'expriment par un dimorphisme sexuel, c'est à dire par des différences morphologiques entre les individus mâles et femelles.
+La transition évolutive de la vie terrestre à la vie aquatique à transformé la morphologie et l'écologie de beaucoup d'espèces de serpents marins. Notamment chez les serprents hydrophiines élapidés et plus précisément les serpents aïpysurine des genres *Emydocephalus* et *Aipysurus*, chez qui l'adaptation à la vie marine aurait pu modifier la sélection naturelle et sexuelle. Ces différents changements s'expriment par un dimorphisme sexuel, c'est à dire par des différences morphologiques entre les individus mâles et femelles.
 
 L'étude de ce dimorphisme nous permettrait de comprendre les contraintes écologiques et comportementales qui feraient évoluer les espèces marines. En particulier, leur morphologie corporelle qui peut nous montrer l'impact des différentes sélections liées à la vie marine.
 
