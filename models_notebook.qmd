@@ -59,7 +59,8 @@ tabularise$headtail(sea_snake1)
 <!--% Chaque étudiant réalise et interprète un graphique pertinent en lien avec le but fixé et les modèles qui seront réalisés. Graphique et interprétation de l'étudiant #1 ci-dessous. -->
 
 ```{r chart1}
-
+chart(data=sea_snake1, tail_length~tail_width_max %col=% sex |species  )+
+  geom_point(alpha=0.5)
 ```
 
 ... interprétation #1...
