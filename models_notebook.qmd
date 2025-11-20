@@ -174,30 +174,27 @@ chart$residuals(snake_lm2)
 
 ```{rGLM(M)1Lea-Amelie}
 
-```
+```         
 
 ```{rgraphGLM(M)1Lea-Amelie}
-
 ```
 
 ```{rresidualsGLM(M)1Lea-Amelie}
 
-```
+```         
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
 ```{rGLM(M)2Thea-Pierre}
-
 ```
 
 ```{rgraphGLM(M)2Thea-Pierre}
 
-```
+```         
 
 ```{rresidualsGLM(M)2Thea-Pierre}
-
 ```
 
 ## Conclusion
