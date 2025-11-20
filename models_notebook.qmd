@@ -82,7 +82,7 @@ chart(data = sea_snake1, body_width ~ svl %col=% species %shape=% sex | genus ) 
 
 ```{r chart3}
 chart(data = sea_snake1, head_length ~ head_width %col=% sex | species) +
-  geom_point(alpha= 0.5)
+  geom_point(alpha= 0.5) 
 ```
 
 ... interprétation #3...
