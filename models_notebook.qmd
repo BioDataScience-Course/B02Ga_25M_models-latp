@@ -86,12 +86,14 @@ sea_snake1$nom_scientifique <- factor(paste(sea_snake1$genus, sea_snake1$species
 sea_snake1$sexe_et_age <- factor(paste(sea_snake1$sex, sea_snake1$adult))
 chart(data = sea_snake1, eye_diam ~ adult %fill=% sexe_et_age | nom_scientifique) +
   geom_boxplot()
+chart(data = sea_snake1, eye_diam ~ sexe_et_age %fill=% sexe_et_age | nom_scientifique) +
+  geom_boxplot()
 chart(data = sea_snake1, eye_diam ~ adult %fill=% nom_scientifique | sex) +
   geom_boxplot()
 chart(data = sea_snake1, eye_diam ~ head_width %col=% nom_scientifique %shape=% sexe_et_age) +
-  geom_point(alpha = 0.75)
+  geom_point(alpha = 0.50)
 chart(data = sea_snake1, eye_diam ~ head_width %col=% sexe_et_age | nom_scientifique) +
-  geom_point(alpha = 0.5)
+  geom_point(alpha = 0.50)
 
 ```
 
