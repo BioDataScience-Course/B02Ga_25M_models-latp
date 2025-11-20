@@ -75,8 +75,8 @@ tabularise$headtail(sea_snake1)
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
 ```{r chart3}
-#chart(data = sea_snake1, `SVL (cm)` ~ `Tail length (cm)` %col=% species) +
-  #geom_point()
+chart(data = sea_snake1, head_length ~ head_width %col=% sex | species) +
+  geom_point()
 ```
 
 ... interprétation #3...
