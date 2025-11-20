@@ -149,15 +149,15 @@ chart$residuals(snake_lm2)
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
-```{rmodel1Lea-Amelie}
+```{r model1Lea-Amelie}
 
 ```
 
-```{rgrapmodel1Lea-Amelie}
+```{r grapmodel1Lea-Amelie}
 
 ```
 
-```{rresiduals1Lea-Amelie}
+```{r residuals1Lea-Amelie}
 
 ```
 
@@ -165,15 +165,15 @@ chart$residuals(snake_lm2)
 
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
-```{rmodel2Thea-Pierre}
+```{r model2Thea-Pierre}
 
 ```
 
-```{rgraphmodel2Thea-Pierre}
+```{r graphmodel2Thea-Pierre}
 
 ```
 
-```{rresiduals2Thea-Pierre}
+```{r residuals2Thea-Pierre}
 
 ```
 
@@ -181,29 +181,32 @@ chart$residuals(snake_lm2)
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-\`\`\`{rGLM(M)1Lea-Amelie}
+```{r}
+#GLM(M)1Lea-Amelie
 
-```         
-
-```{rgraphGLM(M)1Lea-Amelie}
 ```
 
-\`\`\`{rresidualsGLM(M)1Lea-Amelie}
-
-```         
+```{r}
+# residualsGLM(M)1Lea-Amelie
+ 
+```
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
 <!--% Élaborez un modèle linéaire généralisé ou mixte par paire d'étudiants dans cette section. -->
 
-```{rGLM(M)2Thea-Pierre}
+```{r}
+# GLM(M)2Thea-Pierre
+
 ```
 
-\`\`\`{rgraphGLM(M)2Thea-Pierre}
+```{r}
+# 
 
-```         
+```
 
-```{rresidualsGLM(M)2Thea-Pierre}
+```{r}
+# 
 ```
 
 ## Conclusion
