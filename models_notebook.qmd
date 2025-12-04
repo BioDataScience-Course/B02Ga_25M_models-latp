@@ -147,8 +147,6 @@ summary(snake_lm1) |> tabularise()
 
 -   comme pente sigificative -\> c'est données sont pertinentes de les comparer l'une à l'autre
 
-------------------------------------------------------------------------
-
 -   largeur du corps est un excellent prédicteur de la longueur de la queue
 
 -   l'effet est positif , fort et hautement significatif
