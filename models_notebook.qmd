@@ -210,7 +210,7 @@ chart$residuals(snake2_lm)
 
 ```{r}
 # GLM(M)2Thea-Pierre
-
+snake_glm2 <- glm( data = sea_snake1, adult ~ eye_diam, family = binomial)# transfo adult en facteur
 ```
 
 ```{r}
