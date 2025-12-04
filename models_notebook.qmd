@@ -161,15 +161,16 @@ chart$residuals(snake_lm2)
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
 ```{r model1Lea-Amelie}
-
+snake1_lm <- lm(data = sea_snake1, tail_width_max~body_width)
+summary(snake1_lm) |> tabularise()
 ```
 
 ```{r grapmodel1Lea-Amelie}
-
+chart(snake1_lm)
 ```
 
 ```{r residuals1Lea-Amelie}
-
+chart$residuals(snake1_lm)
 ```
 
 #### Modèle linéaire 2
