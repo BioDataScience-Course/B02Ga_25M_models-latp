@@ -42,6 +42,11 @@ sfilter(.,
 sea_snake1<-janitor::clean_names(sea_snake1) 
 sea_snake1 <-srename(sea_snake1, svl = svl_cm , head_length = head_length_mm , tail_length = tail_length_cm , head_width = head_width_mm , body_width = body_width_cm , eye_diam = eye_diam_mm)
 
+#changer chr en fct
+sea_snake1$sex<- as.factor(sea_snake1$sex)
+sea_snake1$adult<- as.factor(sea_snake1$adult)
+sea_snake1$genus<- as.factor(sea_snake1$genus)
+sea_snake1$species<- as.factor(sea_snake1$species)
 # Etape 4 : Ajout des labels et des unités --------------------------------
 
 sea_snake1 <- labelise(sea_snake1,
