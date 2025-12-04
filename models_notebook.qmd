@@ -178,15 +178,16 @@ chart$residuals(snake1_lm)
 <!--% Construisez un modèle linéaire par paire d'étudiants dans cette section. -->
 
 ```{r model2Thea-Pierre}
-
+snake2_lm <- lm(data = sea_snake1, eye_diam ~ (head_length + head_width) * sex)
+summary_(snake2_lm)|>tabularise()
 ```
 
 ```{r graphmodel2Thea-Pierre}
-
+#chart(snake2_lm) #on peut pas faire en 2D
 ```
 
 ```{r residuals2Thea-Pierre}
-
+chart$residuals(snake2_lm)
 ```
 
 #### Modèle linéaire généralisé et/ou mixte 1
@@ -209,7 +210,7 @@ chart$residuals(snake1_lm)
 
 ```{r}
 # GLM(M)2Thea-Pierre
-
+snake_glm2 <- glm( data = sea_snake1, adult ~ eye_diam, family = binomial)# transfo adult en facteur
 ```
 
 ```{r}
