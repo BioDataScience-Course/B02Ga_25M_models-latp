@@ -137,13 +137,19 @@ snake_lm1 <- lm(data = sea_snake1, tail_length ~ body_width)
 summary(snake_lm1) |> tabularise()
 ```
 
+...interprétation...
+
 ```{r lmx1Lea-Amelie}
 chart(snake_lm1)
 ```
 
+... interprétation
+
 ```{r lmp1Lea-Amelie}
 chart$residuals(snake_lm1)
 ```
+
+...interprétation
 
 #### Régression linéaire 2
 
@@ -154,13 +160,19 @@ snake_lm2 <- lm(data = sea_snake1, eye_diam ~ head_length)
 tabularise(summary(snake_lm2))
 ```
 
+...interpretation
+
 ```{r}
 chart(snake_lm2)
 ```
 
+...interpretation
+
 ```{r}
 chart$residuals(snake_lm2)
 ```
+
+...interpretation
 
 #### Modèle linéaire 1
 
@@ -171,13 +183,19 @@ snake1_lm <- lm(data = sea_snake1, tail_width_max~body_width)
 summary(snake1_lm) |> tabularise()
 ```
 
+...interpretation
+
 ```{r grapmodel1Lea-Amelie}
 chart(snake1_lm)
 ```
 
+...interpretation
+
 ```{r residuals1Lea-Amelie}
 chart$residuals(snake1_lm)
 ```
+
+...interpretation
 
 #### Modèle linéaire 2
 
@@ -188,13 +206,19 @@ snake2_lm <- lm(data = sea_snake1, eye_diam ~ (head_length + head_width) * sex)
 summary_(snake2_lm)|>tabularise()
 ```
 
+...interpretation
+
 ```{r graphmodel2Thea-Pierre}
 #chart(snake2_lm) #on peut pas faire en 2D
 ```
 
+...interpretation
+
 ```{r residuals2Thea-Pierre}
 chart$residuals(snake2_lm)
 ```
+
+interpretation...
 
 #### Modèle linéaire généralisé et/ou mixte 1
 
@@ -206,15 +230,21 @@ chart$residuals(snake2_lm)
 #summary(snake1_glm) |>tabularise()
 ```
 
+...interpretation
+
 ```{r}
 # chartGLM(M)1Lea-Amelie
 #chart(snake1_glm)
 ```
 
+...interpretation
+
 ```{r}
 # residualsGLM(M)1Lea-Amelie
 #chart$residuals(snake1_glm)
 ```
+
+...interpretation
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
@@ -225,14 +255,20 @@ chart$residuals(snake2_lm)
 snake_glm2 <- glm( data = sea_snake1, adult ~ eye_diam, family = binomial)# transfo adult en facteur
 ```
 
+...interpretation
+
 ```{r}
 # 
 
 ```
 
+...interpretation
+
 ```{r}
 # 
 ```
+
+...interpretation
 
 ## Conclusion
 
