@@ -195,12 +195,18 @@ chart$residuals(snake1_lm)
 
 ```{r}
 #GLM(M)1Lea-Amelie
+#snake1_glm <- glm(data = sea_snake1, sex ~ tail_length , family = binomial)
+#summary(snake1_glm) |>tabularise()
+```
 
+```{r}
+# chartGLM(M)1Lea-Amelie
+#chart(snake1_glm)
 ```
 
 ```{r}
 # residualsGLM(M)1Lea-Amelie
- 
+#chart$residuals(snake1_glm)
 ```
 
 #### Modèle linéaire généralisé et/ou mixte 2
