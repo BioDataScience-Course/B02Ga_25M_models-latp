@@ -1,6 +1,6 @@
 ---
-title: "___"
-author: "___, ___, ___, ___"
+title: "Dimorphisme sexuel chez les serpents de mer"
+author: "Léa Brohez, Amélie Pierson, Théa Rousseau, Pierre Martin"
 format:
   pdf:
     documentclass: report
