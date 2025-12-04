@@ -106,7 +106,17 @@ sea_snake1$sexe_et_age <- factor(paste(sea_snake1$sex, sea_snake1$adult))
 
 ```
 
-... interprétation #4...
+Chez Aipysurus duboisii, les individus ont un diamètre des yeux médians similaires indépendamment de l'âge et du sexe. Un individu femelle adulte à son diamètre des yeux supérieur à la médiane plus d'1.5 fois supérieur à l'écart interquartile.
+
+Chez Aipysurus eydouxii, les mâles ont des yeux plus grand que les femelles pour dans leur catégorie d'âge. Les diamètres médians des yeux sont plus élevés chez les adultes que chez les jeunes.
+
+Chez Aipysurus follosquama, les femelles adultes ont des yeux plus grand que les mâles adultes sans prendre en compte les valeurs en dehors de l'écart interquartile. C'est l'opposé chez les jeunes où les mâles ont des yeux plus gros que les femelles.
+
+Chez Aipysurus fuscus, les adultes ont une valeur médiane similaire pour le diamètre des yeux mais les mâles ont une plus grande variation de aille supérieure à la médiane.
+
+Chez Aipysurus laevis, les femelles ont des yeux plus grand que les mâles pour dans leur catégorie d'âge.
+
+Chez Emydocephalus annulatus, les adultes ont un diamètre des yeux médian similaire tandisque chez les jeunes les mâles ont des yeux plus grand que les femelles.
 
 ### Modélisation
 
