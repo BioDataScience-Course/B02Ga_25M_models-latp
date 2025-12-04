@@ -76,7 +76,13 @@ chart(data = sea_snake1, body_width ~ svl %col=% species %shape=% sex | genus ) 
 #geom_bar()
 ```
 
-... interprétation #2...
+On peut voir que le gène Alpysurus est beaucoup plus abondant que l'autre
+
+Il y a autant de mâle que de femelle, c'est assez bien équilibré
+
+L'espèce laevis a une largeur de corp beaucoup plus grande que lers autres
+
+Il n'y a qu'une seule espèce qui porte le gène Emydocephalus
 
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
