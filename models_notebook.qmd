@@ -237,7 +237,7 @@ summary_(snake2_lm)|>tabularise()
 
 #Si tu veux mettre un graphique en 3D c'est le code. Les femelles sont en bleu et les mâles en rose.
 car::scatter3d(data = sea_snake1, eye_diam ~ (head_length + head_width) * sex,
-  fit = "linear", residuals = TRUE, bg = "white", axis.scales = TRUE,
+  fit = "linear", residuals = TRUE, bg.col = "white", axis.scales = TRUE,
   grid = TRUE, ellipsoid = FALSE)
 rgl::rglwidget(width = 800, height = 800)
 ```
@@ -286,7 +286,9 @@ snake_glm2 <- glm( data = sea_snake1, sex ~ eye_diam, family = binomial)
 summary_(snake_glm2) |> tabularise()# transfo adult en facteur
 ```
 
-...interpretation
+La dispersion vaut 1.38 (506.7/386) alors que le paramètre de dispersion du modèle est fixé à 1. Nous sommes dans un cas de légère surdispersion.
+
+Les deux paramètres sont significativement différent de 0 au seuil alpha de 5%.
 
 ```{r}
 # 
