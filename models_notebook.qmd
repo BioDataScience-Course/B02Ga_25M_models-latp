@@ -183,7 +183,17 @@ chart(snake_lm1)
 chart$residuals(snake_lm1)
 ```
 
-...interprétation
+-   Les résidus sont faibles par rapport à la plage des valeurs prédites. ( Graphique A)
+
+-   La linéarité est relativement respectée car le nuage de point est légèrement curvilinéaire. (Graphique A)
+
+-   On observe plusieurs valeurs extrêmes. (Graphique A)
+
+-   Les résidus suivent une distribution normale. (Graphique B)
+
+-   Il y a une relativement bonne homoscédasticité des résidus. (Graphique C)
+
+-   Plusieurs points ont une distance de Cook et un effet de levier important. (Graphique D)
 
 #### Régression linéaire 2
 
