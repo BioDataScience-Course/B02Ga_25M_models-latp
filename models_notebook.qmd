@@ -161,11 +161,11 @@ summary(snake_lm1) |> tabularise()
 
 -   L'ordonnée à l'origine (alpha = 46.56) est significative au seuil alpha de 5%
 
--   La pente ( beta = 2.11) est significative au seuil alpha de 5%. Cela signifie que pour chaque augmentation d'une unité de la largeur du corps, la longueur de la queue augmente en moyenne de 2.11 unités
+-   La pente ( beta = 2.11) est positive et est significative au seuil alpha de 5%. Cela signifie que pour chaque augmentation d'une unité de la largeur du corps, la longueur de la queue augmente en moyenne de 2.11 unités
 
--   La pente étant significative, ça valide le fait que comparer la longueur de la queue avec la largeur du corps entre elles est pertinent
+-   La pente étant significative au seuil alpha de 5%, ça valide le fait que comparer la longueur de la queue avec la largeur du corps entre elles est pertinent
 
--   Le modèle permet prédire efficacement la longueur de la queue àpd la largeur du corps
+-   Le modèle permet prédire efficacement la longueur de la queue à partir de la largeur du corps
 
 ```{r lmx1Lea-Amelie}
 chart(snake_lm1)
@@ -175,9 +175,9 @@ chart(snake_lm1)
 
 -   L'intervalle de confiance autour de la droite de régression est relativement étroite, surtout au milieu de celle-ci et ça nous indique que l'estimation de la relation est précise et fiable.
 
--   Il y a homoscédasticité car les points se distribuent de manière relativement homogène autour de la droite de régression. Le modèle est donc assez robuste.
+-   On observe une faible dispersion des points autour de la droite de régression ce qui signifie que la régression linéaire est robuste.
 
--   Le nuage de point se décondense au niveau des valeurs extrêmes
+-   Le nuage de point est linéaire et se décondense légèrement au niveau des valeurs extrêmes
 
 ```{r lmp1Lea-Amelie}
 chart$residuals(snake_lm1)
@@ -227,19 +227,47 @@ snake1_lm <- lm(data = sea_snake1, tail_width_max~body_width)
 summary(snake1_lm) |> tabularise()
 ```
 
-...interpretation
+-   Le modèle linéaire est hautement significatif (Statistique F = 1394, p\<2.22e-16) et cela indique que la relation entre la largeur de la queue et la largeur du corps n'est pas due au hasard.
+
+-   La largeur du corps est un excellent prédicteur de la largeur de la queue car le coefficient de détermination multiple (R\^2 = 0.7912) est élevé. ça signifie que la largeur du corps explique à 79.12% la variance de la largeur de la queue et donc que le modèle explique une grande partie de la variabilité.
+
+-   L'effet est positif, fort et hautement significatif
+
+-   L'ordonnée à l'origine (alpha = 6.905) est significative au seuil alpha de 5%
+
+-   La pente (beta = 0.637) est positive et est significative au seuil alpha de 5%. Cela signifie que pour chaque augmentation d'une unité de la largeur du corps, la largeur de la queue augmente en moyenne de 0.637 unité.
+
+-   La pente étant significative au seuil alpha de 5%, ça valide le fait que comparer la largeur de la queue avec la largeur du corps entre elles est pertinent.
+
+-   Le modèle permet de prédire efficacement la largeur de la queue à partir de la largeur du corps.
 
 ```{r grapmodel1Lea-Amelie}
 chart(snake1_lm)
 ```
 
-...interpretation
+-   On observe une corrélation positive entre nos variables (plus la largeur du corps est grande, plus la largeur de la queue est grande aussi).
+
+-   L'intervalle de confiance est étroite sur toute la droite de régression et ça nous indique que l'estimation de la relation est précise.
+
+-   Le nuage de point est linéaire et se décondense légèrement au niveau des valeurs extrêmes.
+
+-   Le modèle est très robuste pour les prédictions car on observe une faible dispersion des points autour de la droite de régression.
 
 ```{r residuals1Lea-Amelie}
 chart$residuals(snake1_lm)
 ```
 
-...interpretation
+-   Les résidus sont faibles par rapport à la plage des valeurs prédites. (Graphique A)
+
+-   Le nuage de point étant légèrement curvilinéaire, la linéarité est donc relativement respectée. (Graphique A)
+
+-   Plusieurs valeurs extrêmes sont observables. (Graphique A)
+
+-   Les résidus ont une distribution qui ne diffère pas trop de la normale mais semble symétrique. (Graphique B)
+
+-   Il y a une relativement bonne homoscédasticité des résidus. (Graphique C)
+
+-   Plusieurs points ont un effet de levier et une distance de Cook important. (Graphique D)
 
 #### Modèle linéaire 2
 
