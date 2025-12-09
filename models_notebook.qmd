@@ -153,29 +153,31 @@ snake_lm1 <- lm(data = sea_snake1, tail_length ~ body_width)
 summary(snake_lm1) |> tabularise()
 ```
 
--   A REECRIRE -LEA
+-   Le modèle de régression linéaire est hautement significatif (Statistique F = 836.7, p\<2.22e-16). Ceci indique que la relation entre ces deux variables n'est pas due au hasard.
 
--   R2 moyennement élevé
+-   La largeur du corps est un excellent prédicteur de la longueur de la queue. Le coefficient de détermination multiple (R\^2 = 0.6945) est élevé. Cela signifie que la largeur du corps explique à 69.45% la variance de la longueur de la queue et donc que le modèle explique une grande partie de la variabilité.
 
--   OAO et pente significatif seuil alpha de 5%
+-   L'effet est positif , fort et hautement significatif
 
--   pour pente , pour chq augmentation d'une unité de largeur de corps, la longueur de la queue augmente en moyenne de 2.1 unité
+-   L'ordonnée à l'origine (alpha = 46.56) est significative au seuil alpha de 5%
 
--   comme pente sigificative -\> c'est données sont pertinentes de les comparer l'une à l'autre
+-   La pente ( beta = 2.11) est significative au seuil alpha de 5%. Cela signifie que pour chaque augmentation d'une unité de la largeur du corps, la longueur de la queue augmente en moyenne de 2.11 unités
 
--   largeur du corps est un excellent prédicteur de la longueur de la queue
+-   La pente étant significative, ça valide le fait que comparer la longueur de la queue avec la largeur du corps entre elles est pertinent
 
--   l'effet est positif , fort et hautement significatif
-
--   modèle explique une grde partie de la variabilité
-
--   modèle final permet predire efficacement la longueur de la queue àpd la largeur du corps
+-   Le modèle permet prédire efficacement la longueur de la queue àpd la largeur du corps
 
 ```{r lmx1Lea-Amelie}
 chart(snake_lm1)
 ```
 
-... interprétation
+-   on observe une corrélation positive entre nos variables (plus la largeur du corps augmente, plus la longueur de la queue augmente aussi)
+
+-   L'intervalle de confiance autour de la droite de régression est relativement étroite, surtout au milieu de celle-ci et ça nous indique que l'estimation de la relation est précise et fiable.
+
+-   Il y a homoscédasticité car les points se distribuent de manière relativement homogène autour de la droite de régression. Le modèle est donc assez robuste.
+
+-   Le nuage de point se décondense au niveau des valeurs extrêmes
 
 ```{r lmp1Lea-Amelie}
 chart$residuals(snake_lm1)
