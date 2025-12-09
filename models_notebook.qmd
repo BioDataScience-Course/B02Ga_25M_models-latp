@@ -63,7 +63,15 @@ chart(data=sea_snake1, tail_length~tail_width_max %col=% sex |species  )+
   geom_point(alpha=0.5)
 ```
 
-... interprétation #1...
+Ce graphique montre la relation entre la longueur et la largeur de la queue pour les six espèces de serpents marins étudiées, permettant ainsi d'évaluer le dimorphisme sexuel lié à ces variables pour chacune des espèces.
+
+Pour l'ensemble des six espèces on observe une corrélation positive entre la longueur et la largeur de la queue : plus la celle-ci est longue, plus elle est large. Cependant, on observe aussi que les nuages de points varient d'une espèce à l'autre, montrant ainsi une différence dans les dimensions de la queue en fonction des espèces. Par exemple, on voit bien que *eydouxii* et *laevis* présentent des valeurs plus élevées pour ces deux variables (queue plus grande) que *annulatus* et *foliosquama*.
+
+En ce qui concerne les différences entre sexes, le graphique montre que les distributions de longueur et de largeur de queue sont très similaires (les points se chevauchent), mais l'ampleur de ce dimorphisme sexuel varie d'une espèce à l'autre.
+
+Pour *laevis* et *duboisii*, ce sont généralement les mâles qui présentent les valeurs les plus élevées pour l'une ou les deux variables. A l'inverse, pour *eydouxii* ce sont les femelles qui atteignent les plus grandes dimensions de queue. Ces différences montrent un dimorphisme sexuel dont l'orientation varie. De plus, pour ces espèces ainsi que *annulatus*, à largeur équivalente, les mâles possèdent une queue plus longue que les femelles.
+
+Pour *foliosquama* et *fuscus*, les nuages de points des différents sexes sont presque entièrement superposés sans séparation marquée. Ceci implique que, dans ces espèces, la morphologie des mâles et des femelles est relativement similaire, et il n'y a donc pas ou peu de dimorphisme observable pour ces deux variables.
 
 <!--% Graphique et interprétation de l'étudiant #2 ci-dessous. -->
 
