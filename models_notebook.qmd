@@ -99,7 +99,11 @@ chart(data = sea_snake1, head_length ~ head_width %col=% sex | species) +
   geom_point(alpha= 0.5) 
 ```
 
-... interprétation #3...
+-   La répartition des données pour chaque espèces est linéaire.
+
+-   La pente est relativement similaire entre chaque espèces mais on pourrait décrire un léger décalage entre les mâles et les femelles chez l'espèce "eydouxii" et "laevis".
+
+-   On observe que plus la tête est large, plus elle est longue.
 
 <!--% Graphique et interprétation de l'étudiant #4 ci-dessous. -->
 
@@ -204,19 +208,31 @@ snake_lm2 <- lm(data = sea_snake1, eye_diam ~ head_length)
 tabularise(summary(snake_lm2))
 ```
 
-...interpretation
+-   Le modèle est significativement différent au seuil alpha de 5%.
+
+-   Le coefficient de détermination est moyennement élevé (R\^2 ajusté = 0.7811).
+
+-   Tous les termes du modèle sont significatifs au seuil alpha de 5%.
+
+-   L'écart type des résidus est relativement faible ce qui indique une bonne précision de prédiction du modèle.
 
 ```{r}
 chart(snake_lm2)
 ```
 
-...interpretation
+-   L'enveloppe de confiance autour de la droite de régression est étroite et démontre la précision du modèle.
 
 ```{r}
 chart$residuals(snake_lm2)
 ```
 
-...interpretation
+-   L'étendue des résidus par rapport aux valeurs prédite est faible.(Graphique A)
+
+-   La distribution des résidus suit une distribution normale.(Graphique B)
+
+-   Il y a homoscédasticité des résidus.(Graphique C)
+
+-   On observe qu'un point présente une distance de Cook et un effet de levier important. (Graphique D)
 
 #### Modèle linéaire 1
 
