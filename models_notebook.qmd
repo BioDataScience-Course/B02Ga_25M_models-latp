@@ -338,7 +338,9 @@ snake_glm1 <- glm(data = sea_snake1, log(body_width) ~ log(svl) + sex_bin, famil
 summary(snake_glm1) |>tabularise()
 ```
 
--   La taille corporelle (SVL) influence fortement le sexe des individus. Plus un individu est grand, plus la probabilité qu’il soit un mâle est élevée. Cet effet es fortement significatif sur le plan statistique.
+-   La taille museau-cloaque (SVL) et le sexe prédisent la largeur du corps. Il existe une relation positive entre les données SVL et body_width.
+
+-   Le sexe a un effet significatif sur la largeur du corps (p\<0.001). Le coefficient négatif de sex_bin (-0.0834) indique que les mâles sont significativement moins larges que les femelles pour une même taille museau-cloaque.
 
 -   Nous avons un cas de sousdispersion dûe à la déviance résiduelle qui est beaucoup plus petite que la valeur des degrés de liberté.
 
@@ -365,15 +367,13 @@ ggplot(sea_snake1, aes(x = log(svl), y = log(body_width), color = as.factor(sex)
 
 ```
 
--   On observe une relation positive claire entre la taille (SVL) et la largeur du corps. Quand la SVL augmente, la largeur du corps augmente aussi.
+-   On observe une relation positive entre la taille museau-cloaque (SVL) et la largeur du corps. Quand la SVL augmente, la largeur du corps augmente aussi. Sur une échelle log–log, cela indique une croissance proportionnelle.
 
--   Sur une échelle log–log, cela indique une relation allométrique (croissance proportionnelle).
-
--    La taille corporelle est un bon prédicteur de la largeur du corps, chez les deux sexes.
+-   Chez les deux sexes, la taille museau-cloaque (SVL) est un bon prédicteur de la largeur du corps, body_width.
 
 -   À taille égale, les femelles ont en moyenne un corps plus large que les mâles.
 
--   Les points sont relativement proches des lignes. Il existe une dispersion normale autour de la relation moyenne
+-   Les points sont relativement proches des lignes. De ce fait, nous pouvons dire que les résidus sont plutôt faible.
 
 ```{r}
 # residualsGLM(M)1Lea-Amelie
