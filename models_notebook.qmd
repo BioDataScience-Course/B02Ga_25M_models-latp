@@ -322,48 +322,32 @@ chart$residuals(snake2_lm)
 
 ```{r}
 #GLM(M)1Lea-Amelie
-#Test1
-snake1_glm <- glm(data = sea_snake1,body_width ~ svl + sex + species,
-  family = Gamma(link = "log"))
-summary(snake1_glm) |>tabularise()
 
-#Test2 
-sn2<- glm(data = sea_snake1,body_width ~ svl + sex, family = Gamma(link = "log"))
-summary(sn2) |>tabularise()
-
-#Test3 
 # 1. Préparer la variable sexe (0 = femelle, 1 = mâle)
 sea_snake1$sex_bin <- ifelse(sea_snake1$sex == "m", 1, 0)
 
-# Vérification rapide
-table(sea_snake1$sex, sea_snake1$sex_bin)
-
 # 2. GLM binomial (régression logistique)
-sn3 <- glm(data = sea_snake1, sex_bin ~ svl + tail_length + body_width + tail_width_max + species, family = binomial(link = "logit"))
-  summary(sn3)|> tabularise()
-  
-#Test4
-# S'assurer que les variables catégorielles sont des facteurs
-sea_snake1$sex <- as.factor(sea_snake1$sex)
-sea_snake1$species <- as.factor(sea_snake1$species)
+  snake_glm1 <- glm(data = sea_snake1, sex_bin ~svl + tail_length + body_width + tail_width_max + species, family = binomial)
+  summary(snake_glm1) |> tabularise()
 
-# GLM gaussien (équivalent à un lm)
-sn4 <- glm(data = sea_snake1, body_width ~ svl + sex * species, family = gaussian)
-  summary(sn4)|>tabularise()
 ```
 
-...interpretation
+-   La déviance résiduelle (310.3) est bien inférieure à la déviance totale (512.4), ce qui montre que les variables morphologique et l'espèce expliquent une grande partie de la différence entre les sexes.
+
+-   La dispersion vaut 0.86 alors que le paramètre de dispersion du modèle est fixé à 1. Nous sommes dans un cas de légère sousdispersion.
+
+-   Toutes les variables sont significatives au seuil alpha de 5% SAUF l'ordonée à l'origine (p=0.229), speciesfuscus (p=0.411 et specieslaevis (p=0.981)
 
 ```{r}
 # chartGLM(M)1Lea-Amelie
-#chart(snake1_glm)
+#chart(snake_glm1)
 ```
 
 ...interpretation
 
 ```{r}
 # residualsGLM(M)1Lea-Amelie
-#chart$residuals(snake1_glm)
+#chart$residuals(snake_glm1)
 ```
 
 ...interpretation
@@ -378,7 +362,7 @@ snake_glm2 <- glm( data = sea_snake1, sex ~ eye_diam, family = binomial)
 summary_(snake_glm2) |> tabularise()# transfo adult en facteur
 ```
 
-La dispersion vaut 1.38 (506.7/386) alors que le paramètre de dispersion du modèle est fixé à 1. Nous sommes dans un cas de légère surdispersion.
+La dispersion vaut 1.38 (506.7/368) alors que le paramètre de dispersion du modèle est fixé à 1. Nous sommes dans un cas de légère surdispersion.
 
 Les deux paramètres sont significativement différent de 0 au seuil alpha de 5%.
 
