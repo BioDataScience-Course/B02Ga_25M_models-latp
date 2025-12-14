@@ -335,7 +335,7 @@ chart$residuals(snake2_lm)
 sea_snake1$sex_bin <- ifelse(sea_snake1$sex == "m", 1, 0)
 
 snake_glm1 <- glm(data = sea_snake1, log(body_width) ~ log(svl) + sex_bin, family = gaussian)
-summary(snake_glm_width) |>tabularise()
+summary(snake_glm1) |>tabularise()
 ```
 
 -   La déviance résiduelle (310.3) est bien inférieure à la déviance totale (512.4), ce qui montre que les variables morphologique et l'espèce expliquent une grande partie de la différence entre les sexes.
