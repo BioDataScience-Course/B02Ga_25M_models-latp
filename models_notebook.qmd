@@ -82,13 +82,17 @@ chart(data = sea_snake1, body_width ~ svl %col=% species %shape=% sex | genus ) 
 #geom_bar()
 ```
 
-On peut voir que le gène Alpysurus est beaucoup plus abondant que l'autre
+Il existe une relation positive entre la longueur museau–cloaque et la largeur du corps. En effet, les individus les plus longs sont également les plus larges.
 
-Il y a autant de mâle que de femelle, c'est assez bien équilibré
+Le genre Aipysurus est beaucoup plus abondant que le genre Emydocephalus dans le jeu de données. Celui-ci n’étant représenté que par une seule espèce, avec une variabilité morphologique plus faible.
 
-L'espèce laevis a une largeur de corp beaucoup plus grande que lers autres
+Le genre Aipysurus présente une plus grande diversité morphologique, avec une large gamme de tailles corporelles.
 
-Il n'y a qu'une seule espèce qui porte le gène Emydocephalus
+L’espèce Aipysurus laevis se distingue par une largeur corporelle significativement plus élevée que celle des autres espèce présentant un fort chevauchement des dimensions corporelles, rendant leur distinction morphologique moins marquée.
+
+La répartition des mâles et des femelles est globalement équilibrée.
+
+Aucun dimorphisme sexuel net n’est observable pour la longueur ou la largeur du corps.
 
 <!--% Graphique et interprétation de l'étudiant #3 ci-dessous. -->
 
@@ -310,7 +314,7 @@ rgl::rglwidget(width = 800, height = 800)
 chart$residuals(snake2_lm)
 ```
 
-interpretation...
+...interpretation
 
 #### Modèle linéaire généralisé et/ou mixte 1
 
@@ -318,8 +322,26 @@ interpretation...
 
 ```{r}
 #GLM(M)1Lea-Amelie
-#snake1_glm <- glm(data = sea_snake1, sex ~ tail_length , family = binomial)
-#summary(snake1_glm) |>tabularise()
+snake1_glm <- glm(data = sea_snake1,body_width ~ svl + sex + species,
+  family = Gamma(link = "log"))
+summary(snake1_glm) |>tabularise()
+
+#Test 2 
+sn2<- glm(data = sea_snake1,body_width ~ svl + sex,
+  family = Gamma(link = "log"))
+summary(sn2) |>tabularise()
+
+#Test 3 
+# 1. Préparer la variable sexe (0 = femelle, 1 = mâle)
+sea_snake1$sex_bin <- ifelse(sea_snake1$sex == "m", 1, 0)
+
+# Vérification rapide
+table(sea_snake1$sex, sea_snake1$sex_bin)
+
+# 2. GLM binomial (régression logistique)
+sn3 <- glm(data = sea_snake1, sex_bin ~ svl + tail_length + body_width + tail_width_max + species,
+  family = binomial(link = "logit"))
+  summary(sn3)|> tabularise()
 ```
 
 ...interpretation
