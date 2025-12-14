@@ -369,7 +369,7 @@ ggplot(sea_snake1, aes(x = log(svl), y = log(body_width), color = as.factor(sex)
 
 -   Sur une échelle log–log, cela indique une relation allométrique (croissance proportionnelle).
 
--    La taille corporelle est un bon prédicteur de la largeur du corps, chez les deux sexes.
+-   La taille corporelle est un bon prédicteur de la largeur du corps, chez les deux sexes.
 
 -   À taille égale, les femelles ont en moyenne un corps plus large que les mâles.
 
