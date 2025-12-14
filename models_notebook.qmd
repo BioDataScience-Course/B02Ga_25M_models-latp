@@ -369,7 +369,7 @@ ggplot(sea_snake1, aes(x = log(svl), y = log(body_width), color = as.factor(sex)
 
 -   On observe une relation positive entre la taille museau-cloaque (SVL) et la largeur du corps. Quand la SVL augmente, la largeur du corps augmente aussi. Sur une échelle log–log, cela indique une croissance proportionnelle.
 
--   Chez les deux sexes, la taille museau-cloaque (SVL) est un bon prédicteur de la largeur du corps, body_width.
+-   Chez les deux sexes, la taille museau-cloaque (SVL) est un bon prédicteur de la largeur du corps (body_width).
 
 -   À taille égale, les femelles ont en moyenne un corps plus large que les mâles.
 
