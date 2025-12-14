@@ -159,7 +159,7 @@ summary(snake_lm1) |> tabularise()
 
 -   La largeur du corps est un excellent prédicteur de la longueur de la queue. Le coefficient de détermination multiple (R\^2 = 0.6945) est élevé. Cela signifie que la largeur du corps explique à 69.45% la variance de la longueur de la queue et donc que le modèle explique une grande partie de la variabilité.
 
--   L'effet est positif , fort et hautement significatif
+-   L'effet est positif et hautement significatif
 
 -   L'ordonnée à l'origine (alpha = 46.56) est significative au seuil alpha de 5%
 
@@ -245,7 +245,7 @@ summary(snake1_lm) |> tabularise()
 
 -   La largeur du corps est un excellent prédicteur de la largeur de la queue car le coefficient de détermination multiple (R\^2 = 0.7912) est élevé. ça signifie que la largeur du corps explique à 79.12% la variance de la largeur de la queue et donc que le modèle explique une grande partie de la variabilité.
 
--   L'effet est positif, fort et hautement significatif
+-   L'effet est positif et hautement significatif
 
 -   L'ordonnée à l'origine (alpha = 6.905) est significative au seuil alpha de 5%
 
