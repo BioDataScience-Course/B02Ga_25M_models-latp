@@ -334,10 +334,8 @@ chart$residuals(snake2_lm)
 # 1. Préparer la variable sexe (0 = femelle, 1 = mâle)
 sea_snake1$sex_bin <- ifelse(sea_snake1$sex == "m", 1, 0)
 
-# 2. GLM binomial (régression logistique)
-  snake_glm1 <- glm(data = sea_snake1, sex_bin ~svl + tail_length + body_width + tail_width_max + species, family = binomial)
-  summary(snake_glm1) |> tabularise()
-
+snake_glm1 <- glm(data = sea_snake1, log(body_width) ~ log(svl) + sex_bin, family = gaussian)
+summary(snake_glm_width) |>tabularise()
 ```
 
 -   La déviance résiduelle (310.3) est bien inférieure à la déviance totale (512.4), ce qui montre que les variables morphologique et l'espèce expliquent une grande partie de la différence entre les sexes.
@@ -348,13 +346,7 @@ sea_snake1$sex_bin <- ifelse(sea_snake1$sex == "m", 1, 0)
 
 ```{r}
 # chartGLM(M)1Lea-Amelie
-ggplot(data = sea_snake1, aes(x = svl, y = sex_bin, color = species)) +
-  geom_jitter(height = 0.05, width = 0, alpha = 0.6) +
-  geom_smooth(method = "glm", method.args = list(family = "binomial"), se = FALSE, size = 1) +
-  labs(title = "Modélisation du dimorphisme sexuel chez les serpents marins",
-    subtitle = "Probabilité d'être un mâle en fonction de la taille (SVL) et de l'espèce",
-    x = "Longueur Museau-Cloaque (SVL) [cm]",
-    y = "Sexe (0 = Femelle, 1 = Mâle)",color = "Espèce") 
+
 
 ```
 
