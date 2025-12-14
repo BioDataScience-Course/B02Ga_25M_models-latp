@@ -416,6 +416,14 @@ Les deux paramètres sont significativement différent de 0 au seuil alpha de 5%
 
 <!--% Lorsque toutes les analyses sont réalisées, terminez ce bloc-notes avec 3 à 6 phrases de conclusion en rapport avec ce que vous avez observé dans vos analyses. Quels sont les modèles les plus pertinents que vous retenez ? -->
 
+```{r}
+AIC(snake_lm1, snake_lm2, snake1_lm, snake2_lm, snake_glm1, snake_glm2)
+anova(snake_lm1, snake1_lm,  test = "Chisq")
+anova(snake_lm2, snake2_lm,  test = "Chisq")
+anova(snake_glm1,  test = "Chisq")
+anova(snake_glm2,  test = "Chisq")
+```
+
 ...vos conclusions ici...
 
 ## Références
