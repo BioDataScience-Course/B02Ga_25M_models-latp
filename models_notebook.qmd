@@ -348,14 +348,21 @@ sea_snake1$sex_bin <- ifelse(sea_snake1$sex == "m", 1, 0)
 
 ```{r}
 # chartGLM(M)1Lea-Amelie
-#chart(snake_glm1)
+ggplot(data = sea_snake1, aes(x = svl, y = sex_bin, color = species)) +
+  geom_jitter(height = 0.05, width = 0, alpha = 0.6) +
+  geom_smooth(method = "glm", method.args = list(family = "binomial"), se = FALSE, size = 1) +
+  labs(title = "Modélisation du dimorphisme sexuel chez les serpents marins",
+    subtitle = "Probabilité d'être un mâle en fonction de la taille (SVL) et de l'espèce",
+    x = "Longueur Museau-Cloaque (SVL) [cm]",
+    y = "Sexe (0 = Femelle, 1 = Mâle)",color = "Espèce") 
+
 ```
 
 ...interpretation
 
 ```{r}
 # residualsGLM(M)1Lea-Amelie
-#chart$residuals(snake_glm1)
+chart$residuals(snake_glm1)
 ```
 
 ...interpretation
