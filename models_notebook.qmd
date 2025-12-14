@@ -298,6 +298,10 @@ chart$residuals(snake1_lm)
 ```{r model2Thea-Pierre}
 snake2_lm <- lm(data = sea_snake1, eye_diam ~ (head_length + head_width) * sex)
 summary_(snake2_lm)|>tabularise()
+
+#proposition
+snake2_lm2 <- lm(data = sea_snake1, eye_diam ~ (head_length * head_width) * sex +0)
+summary_(snake2_lm2)|>tabularise()
 ```
 
 ...interpretation
