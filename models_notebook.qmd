@@ -29,7 +29,11 @@ Le but de cette analyse est de quantifier et modéliser le dimorphisme sexuel ch
 
 <!--% Indiquez ici d'où viennent les données et aussi quel logiciel (et version) vous utilisez pour les analyses. Inspirez-vous des projets du premier module de SDD II. -->
 
-Les données ont été collectées par Shine Richard et al. en 2003 et ont été rendues public sur le site Dryad. Les informations publiées contiennent un résumé des observations et une explication de comment elles pourraient être utilisées, ainsi q'un tableau Excel regroupant toutes les données.
+Les données ont été collectées par Shine Richard et al. en 2003 et sont disponibles publiquement sur le site Dryad. Les informations publiées contiennent un résumé des observations et une explication de comment elles pourraient être utilisées, ainsi q'un tableau Excel regroupant toutes les données.
+
+Les données ont été modifiées dans le fichier import.R afin de correspondre au mieux à notre travail.
+
+L'analyse de nos données se fait à l'aide du logiciel R (R version4.4.1) dans la Sciviews Box 2025 du Saturn Cloud du cours de Science des données de l'UMONS.
 
 ```{r setup, include=FALSE}
 # Ceci est nécessaire pour les tests SDD, ne pas utiliser dans un "vrai" projet
@@ -367,14 +371,16 @@ La dispersion vaut 1.38 (506.7/368) alors que le paramètre de dispersion du mod
 Les deux paramètres sont significativement différent de 0 au seuil alpha de 5%.
 
 ```{r}
-# 
-
+#chartGLM2Théa-Pierre 
+#chart(data = sea_snake1, sex ~ eye_diam) +
+#  geom_point() +
+#  stat_smooth(method = "glm",method.args = list(faùily = binomial), formula = y ~ x, se = FALSE)
 ```
 
 ...interpretation
 
 ```{r}
-# 
+#chart$residuals(snake_glm2) 
 ```
 
 ...interpretation
