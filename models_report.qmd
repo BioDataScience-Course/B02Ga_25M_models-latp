@@ -16,9 +16,17 @@ bibliography: references.bib
 
 <!--% Rédigez l'introduction de ce rapport en 5-6 phrases.-->
 
+La transition évolutive de la vie terrestre vers la vie aquatique a entraîné d'importantes modifications morphologiques et écologiques chez de nombreuses espèces de serpents marins. Ce phénomène est particulièrement marqué chez les serpents hydrophiines élapidés, notamment au sein des aïpysurines des genres *Emydocephalus* et *Aipysurus.*
+
+Pour ces espèces, l'adaptation à la vie marine semble avoir modifié les dynamiques de sélection naturelle et sexuelle, ce qui se traduit par un dimorphisme sexuel.
+
+L'analyse de ces différences morphologiques entre les mâles et les femelles est essentielle pour nous permettre de comprendre les contraintes écologiques et comportementales qui influencent l'évolution des espèces marines. Ainsi, l'étude approfondie de leur morphologie corporelle permettrait de mettre en évidence l'impact des pressions sélectives propres à la vie marine.
+
 ## But
 
 <!--% Rédigez le but de ce rapport en 2 phrases.-->
+
+L'objectif de cette analyse est de quantifier et de modéliser le dimorphisme sexuel chez plusieurs espèces de serpents marins des genres *Emydocephalus* et *Aipysurus* à partir de mesures biométriques. Ce travail a pour but de déterminer l'impact précis des mécanismes de sélection sur la morphologie de ces serpents marins.
 
 ## Matériel et méthodes
 
