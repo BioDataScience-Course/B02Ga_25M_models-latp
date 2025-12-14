@@ -338,15 +338,28 @@ snake_glm1 <- glm(data = sea_snake1, log(body_width) ~ log(svl) + sex_bin, famil
 summary(snake_glm1) |>tabularise()
 ```
 
--   La déviance résiduelle (310.3) est bien inférieure à la déviance totale (512.4), ce qui montre que les variables morphologique et l'espèce expliquent une grande partie de la différence entre les sexes.
-
--   La dispersion vaut 0.86 alors que le paramètre de dispersion du modèle est fixé à 1. Nous sommes dans un cas de légère sousdispersion.
-
--   Toutes les variables sont significatives au seuil alpha de 5% SAUF l'ordonée à l'origine (p=0.229), speciesfuscus (p=0.411 et specieslaevis (p=0.981)
+-   interpretation
 
 ```{r}
 # chartGLM(M)1Lea-Amelie
 
+# On ajoute les prédictions du modèle dans le tableau
+sea_snake1$prediction <- predict(snake_glm1)
+
+# créer le graphique 
+ggplot(sea_snake1, aes(x = log(svl), y = log(body_width), color = as.factor(sex))) +
+  # Affiche les observations
+  geom_point(alpha = 0.6) + 
+  # Affiche les droites du modèle 
+  geom_line(aes(y = prediction), size = 1) + 
+  # Titres et légendes
+  labs(
+    title = "Modèle GLM : Largeur du corps vs Longueur (SVL)",
+    subtitle = "Échelle Log-Log - Lignes parallèles imposées par le modèle sans interaction",
+    x = "Logarithme de la longueur museau-cloaque",
+    y = "Logarithme de la largeur du corps",
+    color = "Sexe"
+  )
 
 ```
 
