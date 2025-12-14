@@ -163,7 +163,7 @@ summary(snake_lm1) |> tabularise()
 
 -   La largeur du corps est un excellent prédicteur de la longueur de la queue. Le coefficient de détermination multiple (R\^2 = 0.6945) est élevé. Cela signifie que la largeur du corps explique à 69.45% la variance de la longueur de la queue et donc que le modèle explique une grande partie de la variabilité.
 
--   L'effet est positif et hautement significatif
+-   L'effet est positif , fort et hautement significatif
 
 -   L'ordonnée à l'origine (alpha = 46.56) est significative au seuil alpha de 5%
 
@@ -249,7 +249,7 @@ summary(snake1_lm) |> tabularise()
 
 -   La largeur du corps est un excellent prédicteur de la largeur de la queue car le coefficient de détermination multiple (R\^2 = 0.7912) est élevé. ça signifie que la largeur du corps explique à 79.12% la variance de la largeur de la queue et donc que le modèle explique une grande partie de la variabilité.
 
--   L'effet est positif et hautement significatif
+-   L'effet est positif, fort et hautement significatif
 
 -   L'ordonnée à l'origine (alpha = 6.905) est significative au seuil alpha de 5%
 
@@ -322,16 +322,16 @@ chart$residuals(snake2_lm)
 
 ```{r}
 #GLM(M)1Lea-Amelie
+#Test1
 snake1_glm <- glm(data = sea_snake1,body_width ~ svl + sex + species,
   family = Gamma(link = "log"))
 summary(snake1_glm) |>tabularise()
 
-#Test 2 
-sn2<- glm(data = sea_snake1,body_width ~ svl + sex,
-  family = Gamma(link = "log"))
+#Test2 
+sn2<- glm(data = sea_snake1,body_width ~ svl + sex, family = Gamma(link = "log"))
 summary(sn2) |>tabularise()
 
-#Test 3 
+#Test3 
 # 1. Préparer la variable sexe (0 = femelle, 1 = mâle)
 sea_snake1$sex_bin <- ifelse(sea_snake1$sex == "m", 1, 0)
 
@@ -339,9 +339,17 @@ sea_snake1$sex_bin <- ifelse(sea_snake1$sex == "m", 1, 0)
 table(sea_snake1$sex, sea_snake1$sex_bin)
 
 # 2. GLM binomial (régression logistique)
-sn3 <- glm(data = sea_snake1, sex_bin ~ svl + tail_length + body_width + tail_width_max + species,
-  family = binomial(link = "logit"))
+sn3 <- glm(data = sea_snake1, sex_bin ~ svl + tail_length + body_width + tail_width_max + species, family = binomial(link = "logit"))
   summary(sn3)|> tabularise()
+  
+#Test4
+# S'assurer que les variables catégorielles sont des facteurs
+sea_snake1$sex <- as.factor(sea_snake1$sex)
+sea_snake1$species <- as.factor(sea_snake1$species)
+
+# GLM gaussien (équivalent à un lm)
+sn4 <- glm(data = sea_snake1, body_width ~ svl + sex * species, family = gaussian)
+  summary(sn4)|>tabularise()
 ```
 
 ...interpretation
