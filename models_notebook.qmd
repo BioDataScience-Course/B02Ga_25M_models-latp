@@ -300,8 +300,8 @@ snake2_lm <- lm(data = sea_snake1, eye_diam ~ (head_length + head_width) * sex)
 summary_(snake2_lm)|>tabularise()
 
 #proposition
-snake2_lm2 <- lm(data = sea_snake1, eye_diam ~ (head_length * head_width) * sex +0)
-summary_(snake2_lm2)|>tabularise()
+#snake2_lm2 <- lm(data = sea_snake1, eye_diam ~ (head_length * head_width) * sex +0)
+#summary_(snake2_lm2)|>tabularise()
 ```
 
 ...interpretation
@@ -375,9 +375,12 @@ Les deux paramètres sont significativement différent de 0 au seuil alpha de 5%
 
 ```{r}
 #chartGLM2Théa-Pierre 
+#transfo y en 0-1
+
+#graphique
 #chart(data = sea_snake1, sex ~ eye_diam) +
-#  geom_point() +
-#  stat_smooth(method = "glm",method.args = list(faùily = binomial), formula = y ~ x, se = FALSE)
+ # geom_point() +
+  #stat_smooth(method = "glm",method.args = list(family = binomial), formula = y ~ x)
 ```
 
 ...interpretation
