@@ -387,14 +387,16 @@ La dispersion vaut 1.38 (506.7/386) alors que le paramètre de dispersion du mod
 Les deux paramètres sont significativement différent de 0 au seuil alpha de 5%.
 
 ```{r}
-# 
-
+#chartGLM2Théa-Pierre 
+#chart(data = sea_snake1, sex ~ eye_diam) +
+#  geom_point() +
+#  stat_smooth(method = "glm",method.args = list(faùily = binomial), formula = y ~ x, se = FALSE)
 ```
 
 ...interpretation
 
 ```{r}
-# 
+#chart$residuals(snake_glm2) 
 ```
 
 ...interpretation
