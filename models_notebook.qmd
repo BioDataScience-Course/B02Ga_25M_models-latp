@@ -370,7 +370,15 @@ ggplot(sea_snake1, aes(x = log(svl), y = log(body_width), color = as.factor(sex)
 chart$residuals(snake_glm1)
 ```
 
-...interpretation
+-   Les résidus sont faibles par rapport à la plage des valeurs prédites (Graphique A)
+
+-   La linéarité est relativement respectée. (Graphique A)
+
+-   Les résidus ont une distribution qui ne diffèrent pas trop de la normale (Graphique B)
+
+-   Il y a une relativement bonne homoscédasticité (Graphique C)
+
+-   Plusieurs points ont un effet de levier important mais sans influencer le modèle car la distance de Cook est faible. (Graphique D)
 
 #### Modèle linéaire généralisé et/ou mixte 2
 
