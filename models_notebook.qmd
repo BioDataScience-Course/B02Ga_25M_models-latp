@@ -347,6 +347,23 @@ summary(snake_glm1) |>tabularise()
 ```{r}
 # chartGLM(M)1Lea-Amelie
 
+# On ajoute les prédictions du modèle dans le tableau
+sea_snake1$prediction <- predict(snake_glm1)
+
+# créer le graphique 
+ggplot(sea_snake1, aes(x = log(svl), y = log(body_width), color = as.factor(sex))) +
+  # Affiche les observations
+  geom_point(alpha = 0.6) + 
+  # Affiche les droites du modèle 
+  geom_line(aes(y = prediction), size = 1) + 
+  # Titres et légendes
+  labs(
+    title = "Modèle GLM : Largeur du corps vs Longueur (SVL)",
+    subtitle = "Échelle Log-Log - Lignes parallèles imposées par le modèle sans interaction",
+    x = "Logarithme de la longueur museau-cloaque",
+    y = "Logarithme de la largeur du corps",
+    color = "Sexe"
+  )
 
 ```
 
