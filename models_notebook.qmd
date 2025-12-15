@@ -302,9 +302,14 @@ summary_(snake2_lm)|>tabularise()
 #proposition
 #snake2_lm2 <- lm(data = sea_snake1, eye_diam ~ (head_length * head_width) * sex +0)
 #summary_(snake2_lm2)|>tabularise()
+# ce second modèle n'a pas été choisi mais est gardé dans le code comme preuve de recherche de modèle
 ```
 
-...interpretation
+Le pramètre alpha, beta 1 et beta 2 sont tous les trois signification au seuil alpha de 5%
+
+La valeur du R carré ajusté est 0.8 cela signifie que ce modèle est un excelent modèle .
+
+F = 296,9 et p \< 2,2 × 10⁻¹⁶ Le modèle est très fortement significatif dans son ensemble.
 
 ```{r graphmodel2Thea-Pierre}
 #chart(snake2_lm) #on peut pas faire en 2D
@@ -316,13 +321,23 @@ car::scatter3d(data = sea_snake1, eye_diam ~ (head_length + head_width) * sex,
 rgl::rglwidget(width = 800, height = 800)
 ```
 
-...interpretation
+Les deux nuages de point se superposent et sont linéaire.
+
+Le plan des femelle est plus élevé que celui des mâles car en moyenne elles ont un diamètre des yeux plus grand.
 
 ```{r residuals2Thea-Pierre}
 chart$residuals(snake2_lm)
 ```
 
-...interpretation
+Les résidus sont moyens par rapport à la plage de valeurs prédites (A)
+
+La linéarité est relativement bien respectée (A)
+
+Les résidus ont une distribution qui ne diffère pas trop de la Normale, et elle est symétrique (B)
+
+ll y a une relativement bonne homoscédasticité des résidus (C).
+
+Un point a un effet de levier important, mais sans influencer le modèle car sa distance de Cook est faible (D)
 
 #### Modèle linéaire généralisé et/ou mixte 1
 
@@ -409,18 +424,10 @@ Les deux paramètres sont significativement différent de 0 au seuil alpha de 5%
 #transfo y en 0-1
 
 #graphique
-#chart(data = sea_snake1, sex ~ eye_diam) +
- # geom_point() +
-  #stat_smooth(method = "glm",method.args = list(family = binomial), formula = y ~ x)
+chart(data = sea_snake1, sex ~ eye_diam) +
+  geom_point() +
+  stat_smooth(method = "glm",method.args = list(family = binomial), formula = y ~ x)
 ```
-
-...interpretation
-
-```{r}
-#chart$residuals(snake_glm2) 
-```
-
-...interpretation
 
 ## Conclusion
 
