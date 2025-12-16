@@ -40,6 +40,26 @@ Les analyses réalisées sont la régression linéaire, le modèle linéaire et 
 
 <!--% Présentez les deux modèles les plus pertinents que vous avez sélectionnés. Structurez la section en deux parties avec deux titres de niveau trois.-->
 
+```{r}
+#Configuration uniquement pour sdd
+if (!"tools:tests" %in% search())
+  source(here::here("tests/tools_tests.R"), attach(NULL, name = "tools:tests"))
+
+# Configure Knitr to use AGG as graphic device
+knitr::opts_chunk$set(dev = "ragg_png")
+
+# Configuration de l'environnement
+SciViews::R("model", lang = "fr")
+
+#Lecture jeu
+sea_snake1 <- read$rds("data/sea_snake1.rds")
+# Tableau des premières et dernières lignes
+tabularise$headtail(sea_snake1)
+
+#ajout sex_bin
+sea_snake1$sex_bin <- ifelse(sea_snake1$sex == "m", 1, 0)
+```
+
 ### Modèle linéaire généralisé : snake_glm1
 
 ```{r}
