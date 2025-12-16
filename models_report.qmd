@@ -42,6 +42,11 @@ Les analyses réalisées sont la régression linéaire, le modèle linéaire et 
 
 ### Modèle linéaire généralisé : snake_glm1
 
+```{r}
+snake_glm1 <- glm(data = sea_snake1, log(body_width) ~ log(svl) + sex_bin, family = gaussian)
+summary(snake_glm1) |>tabularise()
+```
+
 Le modèle snake_glm1 est le meilleur modèle car il présente une AIC négative, -8.162, qui est aussi la plus basse de tous les modèles testés. Ce modèle linéaire généralisé modélise la relation entre le logarithme de la largeur du corps, *log(body_width)*, et le sexe de l'individu, *sex_bin*.
 
 > Les résultats montrent que :
@@ -52,9 +57,14 @@ Le modèle snake_glm1 est le meilleur modèle car il présente une AIC négative
 >
 > -   La valeur très basse de l’AIC montre que la qualité d'ajustement des données est bonne et que la complexité du modèle est faible.
 
-### Modèle linéaire : snake2_lm 
+### Modèle linéaire : snake2_lm
 
-Le deuxième meilleur modèle est le modèle snake2_lm car il fait parti de ceux ayant une AIC des plus basses, 590. Ce modèle linéaire étudie la relation entre le diamètre de l’œil et plusieurs variables morphologiques, notamment : la longueur et largeur de la tête, le sexe ainsi que les interactions entre ces variables.
+```{r}
+snake2_lm <- lm(data = sea_snake1, eye_diam ~ (head_length + head_width) * sex)
+summary_(snake2_lm)|>tabularise()
+```
+
+Le deuxième meilleur modèle est le modèle snake2_lm car il fait parti de ceux ayant une AIC des plus basses, 590. De plus, celui-ci a le R\^2 le plus élevé parmis les modèles testés. Ce modèle linéaire étudie la relation entre le diamètre de l’œil et plusieurs variables morphologiques, notamment : la longueur et largeur de la tête, le sexe ainsi que les interactions entre ces variables.
 
 > Les résultats indiquent que certaines variables morphologiques ont un effet significatif sur le diamètre de l’œil, tandis que les interactions et l’effet du sexe sont plus faibles ou non significatifs.
 
