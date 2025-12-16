@@ -29,7 +29,7 @@ Le but de cette analyse est de quantifier et modéliser le dimorphisme sexuel ch
 
 <!--% Indiquez ici d'où viennent les données et aussi quel logiciel (et version) vous utilisez pour les analyses. Inspirez-vous des projets du premier module de SDD II. -->
 
-Les données ont été collectées par Shine Richard et al. en 2003 et sont disponibles publiquement sur le site [Dryad](https://datadryad.org/dataset/doi:10.5061/dryad.t1g1jwt82). Les informations publiées contiennent un résumé des observations et une explication de comment elles pourraient être utilisées, ainsi q'un tableau Excel regroupant toutes les données.
+Les données ont été collectées par Shine Richard et al. en 2003 et sont disponibles publiquement sur le site [Dryad](https://datadryad.org/dataset/doi:10.5061/dryad.t1g1jwt82). Les informations publiées contiennent un résumé des observations et une explication de comment elles pourraient être utilisées, ainsi qu'un tableau Excel regroupant toutes les données.
 
 Les données ont été modifiées dans le fichier import.R afin de correspondre au mieux à notre travail.
 
@@ -88,11 +88,11 @@ chart(data = sea_snake1, body_width ~ svl %col=% species %shape=% sex | genus ) 
 
 Il existe une relation positive entre la longueur museau–cloaque et la largeur du corps. En effet, les individus les plus longs sont également les plus larges.
 
-Le genre Aipysurus est beaucoup plus abondant que le genre Emydocephalus dans le jeu de données. Celui-ci n’étant représenté que par une seule espèce, avec une variabilité morphologique plus faible.
+Le genre *Aipysurus* est beaucoup plus abondant que le genre *Emydocephalus* dans le jeu de données. Celui-ci n’étant représenté que par une seule espèce, avec une variabilité morphologique plus faible.
 
-Le genre Aipysurus présente une plus grande diversité morphologique, avec une large gamme de tailles corporelles.
+Le genre *Aipysurus* présente une plus grande diversité morphologique, avec une large gamme de tailles corporelles.
 
-L’espèce Aipysurus laevis se distingue par une largeur corporelle significativement plus élevée que celle des autres espèce présentant un fort chevauchement des dimensions corporelles, rendant leur distinction morphologique moins marquée.
+L’espèce *Aipysurus laevis* se distingue par une largeur corporelle significativement plus élevée que celle des autres espèce présentant un fort chevauchement des dimensions corporelles, rendant leur distinction morphologique moins marquée.
 
 La répartition des mâles et des femelles est globalement équilibrée.
 
@@ -107,7 +107,7 @@ chart(data = sea_snake1, head_length ~ head_width %col=% sex | species) +
 
 -   La répartition des données pour chaque espèces est linéaire.
 
--   La pente est relativement similaire entre chaque espèces mais on pourrait décrire un léger décalage entre les mâles et les femelles chez l'espèce "eydouxii" et "laevis".
+-   La pente est relativement similaire entre chaque espèces mais on pourrait décrire un léger décalage entre les mâles et les femelles chez l'espèce "*eydouxii*" et "*laevis*".
 
 -   On observe que plus la tête est large, plus elle est longue.
 
@@ -138,17 +138,17 @@ chart(data = sea_snake1, eye_diam ~ adult %fill=% sexe_et_age | nom_scientifique
 # Une boîte à moustache a été gardée pour ne pas avoir que des nuages de points.
 ```
 
-Chez Aipysurus duboisii, les individus ont un diamètre des yeux médians similaires indépendamment de l'âge et du sexe. Un individu femelle adulte à son diamètre des yeux supérieur à la médiane plus d'1.5 fois supérieur à l'écart interquartile.
+Chez *Aipysurus* *duboisii*, les individus ont un diamètre des yeux médians similaire indépendamment de l'âge et du sexe. Un individu femelle adulte à son diamètre des yeux supérieur à la médiane plus d'1.5 fois supérieur à l'écart interquartile.
 
-Chez Aipysurus eydouxii, les mâles ont des yeux plus grand que les femelles pour dans leur catégorie d'âge. Les diamètres médians des yeux sont plus élevés chez les adultes que chez les jeunes.
+Chez *Aipysurus* *eydouxii*, les mâles ont des yeux plus grands que les femelles dans leur catégorie d'âge. Les diamètres médians des yeux sont plus élevés chez les adultes que chez les jeunes.
 
-Chez Aipysurus follosquama, les femelles adultes ont des yeux plus grand que les mâles adultes sans prendre en compte les valeurs en dehors de l'écart interquartile. C'est l'opposé chez les jeunes où les mâles ont des yeux plus gros que les femelles.
+Chez *Aipysurus* f*ollosquama*, les femelles adultes ont des yeux plus grands que les mâles adultes sans prendre en compte les valeurs en dehors de l'écart interquartile. C'est l'opposé chez les jeunes où les mâles ont des yeux plus gros que les femelles.
 
-Chez Aipysurus fuscus, les adultes ont une valeur médiane similaire pour le diamètre des yeux mais les mâles ont une plus grande variation de aille supérieure à la médiane.
+Chez *Aipysurus fuscus*, les adultes ont une valeur médiane similaire pour le diamètre des yeux. Mais les mâles ont une plus grande variation de taille supérieure à la médiane.
 
-Chez Aipysurus laevis, les femelles ont des yeux plus grand que les mâles pour dans leur catégorie d'âge.
+Chez *Aipysurus* *laevis*, les femelles ont des yeux plus grands que les mâles dans leur catégorie d'âge.
 
-Chez Emydocephalus annulatus, les adultes ont un diamètre des yeux médian similaire tandisque chez les jeunes les mâles ont des yeux plus grand que les femelles.
+Chez *Emydocephalus* *annulatus*, les adultes ont un diamètre des yeux médian similaire tandis que chez les jeunes, les mâles ont des yeux plus grands que les femelles.
 
 ### Modélisation
 
@@ -232,7 +232,7 @@ chart(snake_lm2)
 chart$residuals(snake_lm2)
 ```
 
--   L'étendue des résidus par rapport aux valeurs prédite est faible.(Graphique A)
+-   L'étendue des résidus par rapport aux valeurs prédites est faible.(Graphique A)
 
 -   La distribution des résidus suit une distribution normale.(Graphique B)
 
@@ -305,9 +305,9 @@ summary_(snake2_lm)|>tabularise()
 # ce second modèle n'a pas été choisi mais est gardé dans le code comme preuve de recherche de modèle
 ```
 
-Le pramètre alpha, beta 1 et beta 2 sont tous les trois signification au seuil alpha de 5%
+Les pramètres alpha, beta 1 et beta 2 sont tous les trois significatif au seuil alpha de 5%
 
-La valeur du R carré ajusté est 0.8 cela signifie que ce modèle est un excelent modèle .
+La valeur du R carré ajusté est 0.8 cela signifie que ce modèle est excellent.
 
 F = 296,9 et p \< 2,2 × 10⁻¹⁶ Le modèle est très fortement significatif dans son ensemble.
 
@@ -321,9 +321,9 @@ car::scatter3d(data = sea_snake1, eye_diam ~ (head_length + head_width) * sex,
 rgl::rglwidget(width = 800, height = 800)
 ```
 
-Les deux nuages de point se superposent et sont linéaire.
+Les deux nuages de points se superposent et sont linéaires.
 
-Le plan des femelle est plus élevé que celui des mâles car en moyenne elles ont un diamètre des yeux plus grand.
+Le plan des femelles est plus élevé que celui des mâles car, en moyenne, elles ont un diamètre des yeux plus grand.
 
 ```{r residuals2Thea-Pierre}
 chart$residuals(snake2_lm)
@@ -353,9 +353,9 @@ snake_glm1 <- glm(data = sea_snake1, log(body_width) ~ log(svl) + sex_bin, famil
 summary(snake_glm1) |>tabularise()
 ```
 
--   La taille museau-cloaque (SVL) et le sexe prédisent la largeur du corps. Il existe une relation positive entre les données SVL et body_width.
+-   La longueur museau-cloaque (SVL) et le sexe prédisent la largeur du corps. Il existe une relation positive entre les données SVL et body_width.
 
--   Le sexe a un effet significatif sur la largeur du corps (p\<0.001). Le coefficient négatif de sex_bin (-0.0834) indique que les mâles sont significativement moins larges que les femelles pour une même taille museau-cloaque.
+-   Le sexe a un effet significatif sur la largeur du corps (p\<0.001). Le coefficient négatif de sex_bin (-0.0834) indique que les mâles sont significativement moins larges que les femelles pour une même longueur museau-cloaque.
 
 -   Nous avons un cas de sousdispersion dûe à la déviance résiduelle qui est beaucoup plus petite que la valeur des degrés de liberté.
 
@@ -382,13 +382,13 @@ ggplot(sea_snake1, aes(x = log(svl), y = log(body_width), color = as.factor(sex)
 
 ```
 
--   On observe une relation positive entre la taille museau-cloaque (SVL) et la largeur du corps. Quand la SVL augmente, la largeur du corps augmente aussi. Sur une échelle log–log, cela indique une croissance proportionnelle.
+-   On observe une relation positive entre la longueur museau-cloaque (SVL) et la largeur du corps. Quand la SVL augmente, la largeur du corps augmente aussi. Sur une échelle log–log, cela indique une croissance proportionnelle.
 
--   Chez les deux sexes, la taille museau-cloaque (SVL) est un bon prédicteur de la largeur du corps (body_width).
+-   Chez les deux sexes, la longueur museau-cloaque (SVL) est un bon prédicteur de la largeur du corps (body_width).
 
--   À taille égale, les femelles ont en moyenne un corps plus large que les mâles.
+-   À taille égale, les femelles ont en moyenne, un corps plus large que les mâles.
 
--   Les points sont relativement proches des lignes. De ce fait, nous pouvons dire que les résidus sont plutôt faible.
+-   Les points sont relativement proches des lignes. De ce fait, nous pouvons dire que les résidus sont plutôt faibles.
 
 ```{r}
 # residualsGLM(M)1Lea-Amelie
@@ -417,7 +417,7 @@ summary_(snake_glm2) |> tabularise()# transfo adult en facteur
 
 La dispersion vaut 1.38 (506.7/368) alors que le paramètre de dispersion du modèle est fixé à 1. Nous sommes dans un cas de légère surdispersion.
 
-Les deux paramètres sont significativement différent de 0 au seuil alpha de 5%.
+Les deux paramètres sont significativement différents de 0 au seuil alpha de 5%.
 
 ```{r}
 #chartGLM2Théa-Pierre 
@@ -438,13 +438,13 @@ AIC(snake_lm1, snake_lm2, snake1_lm, snake2_lm, snake_glm1, snake_glm2)
 
 ```
 
-Dans la recherche des 2 meilleurs modèles, le modèle snake_lm1 et le snake1_lm sont rejetés car leur AIC est beacoup plus élevé que les autres.
+Dans la recherche des deux meilleurs modèles, le modèle snake_lm1 et le snake1_lm sont rejetés car leur AIC est beacoup plus élevé que les autres.
 
 Le modèle snake2_lm est préféré au modèle snake_lm2 car sont AIC est plus faible et que son R carré ajusté est légèrement supérieur (R2 ajusté : 0.8004 \> R2 ajusté : 0.7811)
 
 Le modèle de glm choisit pour le rapport est snake_glm1 car son AIC est negatif et est beaucoup plus bas que celui du snake_glm2.
 
-Le modèle snake_glm1 est aussi choisi car il suit une gaussienne tandis que snake_glm2 suit une binomiale que nous n'avons ne savons pas analyser.
+Le modèle snake_glm1 est aussi choisi car il suit une gaussienne tandis que snake_glm2 suit une binomiale que nous ne sommes pas capable, à notre niveau, d'analyser.
 
 ## Références
 

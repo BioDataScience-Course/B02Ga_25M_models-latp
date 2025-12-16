@@ -32,7 +32,7 @@ L'objectif de cette analyse est de quantifier et de modéliser le dimorphisme se
 
 <!--% Cette section doit comprendre deux parties. La première partie doit expliciter les données employées et la seconde traiter des analyses réalisées et des logiciels employés.-->
 
-Les données employées sont des mesures biométriques effectuées sur différentes espèces d'Aipysurine, des serpents de mer. Ces mesures ont été réalisées depuis les spécimens conservés dans les musées. Le jeu de données utilisé dans ce rapport diffère légèrement du jeu de données initiale, le jeu modifié comprend uniquement : le genre, l'espèce, les musées, la longueur du museau-cloaque, la longueur de la queue, la largeur de la queue, la longueur de la tête, la largeur de la tête, la largeur du corps, le diamètre de l'oeil, le sexe et le stade du serpent indiquant s'il est juvénile ou adulte.
+Les données employées sont des mesures biométriques effectuées sur différentes espèces d'Aipysurine, des serpents de mer. Ces mesures ont été réalisées depuis les spécimens conservés dans les musées. Le jeu de données utilisé dans ce rapport diffère légèrement du jeu de données initiale. En effet, le jeu modifié comprend uniquement : le genre, l'espèce, les musées, la longueur du museau-cloaque, la longueur de la queue, la largeur de la queue, la longueur de la tête, la largeur de la tête, la largeur du corps, le diamètre de l'oeil, le sexe et le stade du serpent indiquant s'il est juvénile ou adulte.
 
 Les analyses réalisées sont la régression linéaire, le modèle linéaire et le modèle linéaire généralisé. Les analyses sont effectuées à l'aide du logiciel R ( R version 4.4.1) à partir de la [SciviewsBox 2025](https://www.sciviews.org/svbox/) dans le [Saturn Cloud](https://saturncloud.io).
 
@@ -84,7 +84,7 @@ snake2_lm <- lm(data = sea_snake1, eye_diam ~ (head_length + head_width) * sex)
 summary_(snake2_lm)|>tabularise()
 ```
 
-Le deuxième meilleur modèle est le modèle snake2_lm car il fait parti de ceux ayant une AIC des plus basses, 590. De plus, celui-ci a le R\^2 le plus élevé parmis les modèles testés. Ce modèle linéaire étudie la relation entre le diamètre de l’œil et plusieurs variables morphologiques, notamment : la longueur et largeur de la tête, le sexe ainsi que les interactions entre ces variables.
+Le deuxième meilleur modèle est le modèle snake2_lm car il fait parti de ceux ayant une AIC des plus basses, 590. De plus, celui-ci a le R\^2 le plus élevé parmi les modèles testés. Ce modèle linéaire étudie la relation entre le diamètre de l’œil et plusieurs variables morphologiques, notamment : la longueur et largeur de la tête, le sexe ainsi que les interactions entre ces variables.
 
 > Les résultats indiquent que certaines variables morphologiques ont un effet significatif sur le diamètre de l’œil, tandis que les interactions et l’effet du sexe sont plus faibles ou non significatifs.
 
@@ -92,12 +92,12 @@ Le deuxième meilleur modèle est le modèle snake2_lm car il fait parti de ceux
 
 <!--% En tenant compte du but de votre carnet de notes et de vos résultats, discutez de résultats et proposez des conclusions à votre analyse en 5 à 10 phrases. -->
 
-Notre modèle linéaire nous montre que le diamètre des yeux est influencé par la largeur de la tête et la longueur de celle-ci mais par par les par les paramètres influencés par le sexe mâle. Cela pourrait être dû au fait que le jeu de données compte différentes espèces et que l'influence de la variable "sex" dépendrait aussi de l'espèce.
+Notre modèle linéaire nous montre que le diamètre des yeux est influencé par la largeur de la tête et la longueur de celle-ci, mais par par les par les paramètres influencés par le sexe mâle. Cela pourrait être dû au fait que le jeu de données compte différentes espèces et que l'influence de la variable "sex" dépendrait aussi de l'espèce.
 
 Notre modèle linéaire généralisé nous montre que le logarithme de largeur du corps est influencée significativement par le logarithme de la longueur museau-cloaque ainsi que par le sexe.
 
-Nous pouvons donc en déduire que puisque le diamètre des yeux est influencé par la largeur de la tête et la longueur de celle-ci ; et le fait que la largeur du corps est influencée par la longueur museau-cloaque, il doit exister des différences morphologiques influencées par la sexe de l'animal.
+Nous pouvons donc en déduire que, puisque le diamètre des yeux est influencé par la largeur et la longueur de la tête et que, la largeur du corps est influencée par la longueur museau-cloaque, il doit exister des différences morphologiques influencées par la sexe de l'animal.
 
-Il se peut que nous ayons introduit un biais en ne comparant chaque espèce séparément ce qui ferait que des différences morphologiques sexuelles n'aient pas été découvert par nos modèle. Toutes les espèces ayant été comparées ensemble pourraient noyer les différences intra-spécifique au profit d'une vision plus globale inter-spécifique.
+Il se peut que nous ayons introduit un biais en ne comparant pas chaque espèce séparément ce qui ferait que du dimorphisme sexuel n'ait pas été découvert par nos modèles. Toutes les espèces ayant été comparées ensemble pourraient noyer les différences intra-spécifiques au profit d'une vision plus globale inter-spécifique.
 
 ## Bibliographie
