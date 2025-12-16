@@ -438,13 +438,13 @@ AIC(snake_lm1, snake_lm2, snake1_lm, snake2_lm, snake_glm1, snake_glm2)
 
 ```
 
-Dans la recherche des deux meilleurs modèles, le modèle snake_lm1 et le snake1_lm sont rejetés car leur AIC est beacoup plus élevé que les autres.
+Dans la recherche des 2 meilleurs modèles, le modèle snake_lm1 et le snake1_lm sont rejetés car leur AIC est beaucoup plus élevé que les autres.
 
 Le modèle snake2_lm est préféré au modèle snake_lm2 car sont AIC est plus faible et que son R carré ajusté est légèrement supérieur (R2 ajusté : 0.8004 \> R2 ajusté : 0.7811)
 
-Le modèle de glm choisit pour le rapport est snake_glm1 car son AIC est negatif et est beaucoup plus bas que celui du snake_glm2.
+Le modèle de glm choisit pour le rapport est snake_glm1 car son AIC est négatif et est beaucoup plus bas que celui du snake_glm2.
 
-Le modèle snake_glm1 est aussi choisi car il suit une gaussienne tandis que snake_glm2 suit une binomiale que nous ne sommes pas capable, à notre niveau, d'analyser.
+Le modèle snake_glm1 est aussi choisi car il suit une gaussienne tandis que snake_glm2 suit une binomiale que nous n'avons pas appris à analyser en cours.
 
 ## Références
 
