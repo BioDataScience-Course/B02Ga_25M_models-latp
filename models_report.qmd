@@ -67,11 +67,11 @@ snake_glm1 <- glm(data = sea_snake1, log(body_width) ~ log(svl) + sex_bin, famil
 summary(snake_glm1) |>tabularise()
 ```
 
-Le modèle `snake_glm1` est le meilleur modèle car il présente une AIC négative, -8.162, qui est aussi la plus basse de tous les modèles testés. Ce modèle linéaire généralisé modélise la relation entre le logarithme de la largeur du corps, `log(body_width)`, et le sexe de l'individu, `sex_bin`.
+Le modèle `snake_glm1` est le meilleur modèle car il présente une AIC négative (-8.162) qui est aussi la plus basse de tous les modèles testés. Ce modèle linéaire généralisé modélise la relation entre le logarithme de la largeur du corps, `log(body_width)`, et le sexe de l'individu, `sex_bin`.
 
 > Les résultats montrent que :
 >
-> -   La variable `sex_bin` (le sexe) a un effet négatif et hautement significatif sur la variable réponse, Log(body_width) (le logarithme de la largeur du corps).
+> -   La variable `sex_bin` (le sexe) a un effet négatif et hautement significatif sur la variable réponse, `Log(body_width)` (le logarithme de la largeur du corps).
 >
 > -   La variable `sex_bin` a également un effet significatif, indiquant une différence marquée entre les deux sexes : mâle et femelle.
 >
@@ -94,7 +94,7 @@ Le deuxième meilleur modèle est le modèle `snake2_lm` car il fait parti de ce
 
 <!--% En tenant compte du but de votre carnet de notes et de vos résultats, discutez de résultats et proposez des conclusions à votre analyse en 5 à 10 phrases. -->
 
-Le modèle linéaire montre que le diamètre des yeux est influencé par la largeur et la longueur de la tête mais pas significativement par le sexe. Cela pourrait être dû au fait que le jeu de données compte différentes espèces et que l'influence de la variable "sex" dépendrait aussi de l'espèce ou que la pression de sélection naturelle sur la vision est identique pour les deux sexes.
+Le modèle linéaire montre que le diamètre des yeux est influencé par la largeur et la longueur de la tête mais pas significativement par le sexe. Cela pourrait être dû au fait que le jeu de données compte différentes espèces et que l'influence du sexe dépendrait aussi de l'espèce ou que la pression de sélection naturelle sur la vision est identique pour les deux sexes.
 
 Le modèle linéaire généralisé montre que le logarithme de largeur du corps est influencé significativement par le logarithme de la longueur museau-cloaque ainsi que par le sexe. En effet, le coefficient négatif associé aux mâles dans le modèle GLM indique que les femelles présentent une largeur corporelle plus importante que les mâles à longueur museau-cloaque égale. Ce dimorphisme sexuel au niveau de la largeur du corps pourrait aussi s'expliquer par des contraintes liées à la reproduction, imposant une sélection différente pour ce trait morphologique chez les femelles.
 
