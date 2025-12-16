@@ -92,20 +92,12 @@ Le deuxième meilleur modèle est le modèle snake2_lm car il fait parti de ceux
 
 <!--% En tenant compte du but de votre carnet de notes et de vos résultats, discutez de résultats et proposez des conclusions à votre analyse en 5 à 10 phrases. -->
 
-<<<<<<< HEAD
 Notre modèle linéaire nous montre que le diamètre des yeux est influencé par la largeur de la tête et la longueur de celle-ci mais pas par les paramètres influencés par le sexe mâle. Cela pourrait être dû au fait que le jeu de données compte différentes espèces et que l'influence de la variable "sex" dépendrait aussi de l'espèce.
-=======
-Notre modèle linéaire nous montre que le diamètre des yeux est influencé par la largeur de la tête et la longueur de celle-ci, mais par par les par les paramètres influencés par le sexe mâle. Cela pourrait être dû au fait que le jeu de données compte différentes espèces et que l'influence de la variable "sex" dépendrait aussi de l'espèce.
->>>>>>> 8925ea0ff2adb104f0d5f0009f954d56ae64982b
 
 Notre modèle linéaire généralisé nous montre que le logarithme de largeur du corps est influencé significativement par le logarithme de la longueur museau-cloaque ainsi que par le sexe.
 
 Nous pouvons donc en déduire que, puisque le diamètre des yeux est influencé par la largeur et la longueur de la tête et que, la largeur du corps est influencée par la longueur museau-cloaque, il doit exister des différences morphologiques influencées par la sexe de l'animal.
 
-<<<<<<< HEAD
 Il se peut que nous ayons introduit un biais en ne comparant pas chaque espèce séparément, ce qui ferait que des différences morphologiques sexuelles n'aient pas été découvertes par nos modèle. Toutes les espèces ayant été comparées ensemble, cela pourrait noyer les différences intra-spécifiques au profit d'une vision plus globale inter-spécifique.
-=======
-Il se peut que nous ayons introduit un biais en ne comparant pas chaque espèce séparément ce qui ferait que du dimorphisme sexuel n'ait pas été découvert par nos modèles. Toutes les espèces ayant été comparées ensemble pourraient noyer les différences intra-spécifiques au profit d'une vision plus globale inter-spécifique.
->>>>>>> 8925ea0ff2adb104f0d5f0009f954d56ae64982b
 
 ## Bibliographie
