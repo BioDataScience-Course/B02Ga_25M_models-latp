@@ -433,18 +433,13 @@ chart(data = sea_snake1, sex_bin ~ eye_diam) +
 
 <!--% Lorsque toutes les analyses sont réalisées, terminez ce bloc-notes avec 3 à 6 phrases de conclusion en rapport avec ce que vous avez observé dans vos analyses. Quels sont les modèles les plus pertinents que vous retenez ? -->
 
-```{r}
-AIC(snake_lm1, snake_lm2, snake1_lm, snake2_lm, snake_glm1, snake_glm2)
+Nos analyses révèlent la présence d'un dimorphisme sexuel significatif chez les genres *Emydocephalus* et *Aipysurus* se traduisant par des femelles ayant un corps plus large à longueur museau-cloaque égale (GLM), ainsi que des variations morphologiques au niveau de la tête et de la queue.
 
-```
+Les modèles les plus pertinents que nous retenons sont le modèle linéaire `snake2_lm` (R\^2 = 0.8) qui relie le diamètre de l’œil aux dimensions de la tête et au sexe ; et le modèle linéaire généralisé (GLM) `snake_glm1` qui permet de mettre en évidence l'impact du sexe sur la largeur corporelle (p\<0.001).
 
-Dans la recherche des 2 meilleurs modèles, le modèle snake_lm1 et le snake1_lm sont rejetés car leur AIC est beaucoup plus élevé que les autres.
+Ces résultats nous indiquent que les contraintes liées à la reproduction, comme le besoin d'un corps plus large chez les femelles pour la gestation, ont pu conduire à des adaptations morphologiques différentes entre les mâles et les femelles.
 
-Le modèle snake2_lm est préféré au modèle snake_lm2 car sont AIC est plus faible et que son R carré ajusté est légèrement supérieur (R2 ajusté : 0.8004 \> R2 ajusté : 0.7811)
-
-Le modèle de glm choisit pour le rapport est snake_glm1 car son AIC est négatif et est beaucoup plus bas que celui du snake_glm2.
-
-Le modèle snake_glm1 est aussi choisi car il suit une gaussienne tandis que snake_glm2 suit une binomiale que nous n'avons pas appris à analyser en cours.
+Ainsi, l'étude de ces traits morphologiques soutient l'idée d'une sélection sexuelle et naturelle agissant différemment sur les serpents marins mâles et femelles dans leur adaptation au milieu marin.
 
 ## Références
 
