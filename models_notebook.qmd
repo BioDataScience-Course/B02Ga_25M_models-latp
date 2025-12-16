@@ -411,7 +411,7 @@ chart$residuals(snake_glm1)
 
 ```{r}
 # GLM(M)2Thea-Pierre
-snake_glm2 <- glm( data = sea_snake1, sex ~ eye_diam, family = binomial)
+snake_glm2 <- glm( data = sea_snake1, sex_bin ~ eye_diam, family = binomial)
 summary_(snake_glm2) |> tabularise()# transfo adult en facteur
 ```
 
