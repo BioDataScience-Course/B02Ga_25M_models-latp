@@ -94,11 +94,11 @@ Le deuxième meilleur modèle est le modèle snake2_lm car il fait parti de ceux
 
 <!--% En tenant compte du but de votre carnet de notes et de vos résultats, discutez de résultats et proposez des conclusions à votre analyse en 5 à 10 phrases. -->
 
-Notre modèle linéaire nous montre que le diamètre des yeux est influencé par la largeur de la tête et la longueur de celle-ci mais pas par les paramètres influencés par le sexe mâle. Cela pourrait être dû au fait que le jeu de données compte différentes espèces et que l'influence de la variable "sex" dépendrait aussi de l'espèce.
+Le modèle linéaire montre que le diamètre des yeux est influencé par la largeur et la longueur de la tête mais pas significativement par le sexe. Cela pourrait être dû au fait que le jeu de données compte différentes espèces et que l'influence de la variable "sex" dépendrait aussi de l'espèce ou que la pression de sélection naturelle sur la vision est identique pour les deux sexes.
 
-Notre modèle linéaire généralisé nous montre que le logarithme de largeur du corps est influencé significativement par le logarithme de la longueur museau-cloaque ainsi que par le sexe.
+le modèle linéaire généralisé montre que le logarithme de largeur du corps est influencé significativement par le logarithme de la longueur museau-cloaque ainsi que par le sexe. En effet, le coefficient négatif associé aux mâles dans le modèle GLM indique que les femelles présentent une largeur corporelle plus importante que les mâles à longueur museau-cloaque égale. Ce dimorphisme sexuel au niveau de la largeur du corps pourrait aussi s'expliquer par des contraintes liées à la reproduction, imposant une sélection différente pour ce trait morphologique chez les femelles.
 
-Nous pouvons donc en déduire que, puisque le diamètre des yeux est influencé par la largeur et la longueur de la tête et que, la largeur du corps est influencée par la longueur museau-cloaque, il doit exister des différences morphologiques influencées par la sexe de l'animal.
+Nous pouvons donc en déduire que, le dimorphisme sexuel s'exprime différemment selon les traits morphologiques. En effet, celui-ci est absent pour les yeux mais est marqué pour la taille et la largeur du corps.
 
 Il se peut que nous ayons introduit un biais en ne comparant pas chaque espèce séparément, ce qui ferait que des différences morphologiques sexuelles n'aient pas été découvertes par nos modèle. Toutes les espèces ayant été comparées ensemble, cela pourrait noyer les différences intra-spécifiques au profit d'une vision plus globale inter-spécifique.
 
