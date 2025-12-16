@@ -40,6 +40,24 @@ Les analyses réalisées sont la régression linéaire, le modèle linéaire et 
 
 <!--% Présentez les deux modèles les plus pertinents que vous avez sélectionnés. Structurez la section en deux parties avec deux titres de niveau trois.-->
 
+### Modèle linéaire généralisé : snake_glm1
+
+Le modèle snake_glm1 est le meilleur modèle car il présente une AIC négative, -8.162, qui est aussi la plus basse de tous les modèles testés. Ce modèle linéaire généralisé modélise la relation entre le logarithme de la largeur du corps, *log(body_width)*, et le sexe de l'individu, *sex_bin*.
+
+> Les résultats montrent que :
+>
+> -   La variable *log(body_width)* a un effet positif et hautement significatif sur la variable réponse, sex_bin.
+>
+> -   La variable *sex_bin* a également un effet significatif, indiquant une différence marquée entre les deux sexes : mâle et femelle.
+>
+> -   La valeur très basse de l’AIC montre que la qualité d'ajustement des données est bonne et que la complexité du modèle est faible.
+
+### Modèle linéaire : snake2_lm 
+
+Le deuxième meilleur modèle est le modèle snake2_lm car il fait parti de ceux ayant une AIC des plus basses, 590. Ce modèle linéaire étudie la relation entre le diamètre de l’œil et plusieurs variables morphologiques, notamment : la longueur et largeur de la tête, le sexe ainsi que les interactions entre ces variables.
+
+> Les résultats indiquent que certaines variables morphologiques ont un effet significatif sur le diamètre de l’œil, tandis que les interactions et l’effet du sexe sont plus faibles ou non significatifs.
+
 ## Discussion et Conclusion
 
 <!--% En tenant compte du but de votre carnet de notes et de vos résultats, discutez de résultats et proposez des conclusions à votre analyse en 5 à 10 phrases. -->
