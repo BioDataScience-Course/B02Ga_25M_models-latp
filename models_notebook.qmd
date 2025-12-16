@@ -33,7 +33,7 @@ Les données ont été collectées par Shine Richard et al. en 2003 et sont disp
 
 Les données ont été modifiées dans le fichier import.R afin de correspondre au mieux à notre travail.
 
-L'analyse de nos données se fait à l'aide du logiciel R (R version4.4.1) dans la [SciviewsBox](https://www.sciviews.org/svbox/) du [Saturn Cloud](https://saturncloud.io) du cours de Science des données de l'UMONS.
+L'analyse de nos données se fait à l'aide du logiciel R (R version4.4.1) dans la [SciviewsBox 2025](https://www.sciviews.org/svbox/) du [Saturn Cloud](https://saturncloud.io) du cours de Science des données de l'UMONS.
 
 ```{r setup, include=FALSE}
 # Ceci est nécessaire pour les tests SDD, ne pas utiliser dans un "vrai" projet
