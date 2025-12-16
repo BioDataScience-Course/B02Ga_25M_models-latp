@@ -52,7 +52,7 @@ Le modèle snake_glm1 est le meilleur modèle car il présente une AIC négative
 >
 > -   La valeur très basse de l’AIC montre que la qualité d'ajustement des données est bonne et que la complexité du modèle est faible.
 
-### Modèle linéaire : snake2_lm 
+### Modèle linéaire : snake2_lm
 
 Le deuxième meilleur modèle est le modèle snake2_lm car il fait parti de ceux ayant une AIC des plus basses, 590. Ce modèle linéaire étudie la relation entre le diamètre de l’œil et plusieurs variables morphologiques, notamment : la longueur et largeur de la tête, le sexe ainsi que les interactions entre ces variables.
 
