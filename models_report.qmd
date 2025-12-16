@@ -34,7 +34,7 @@ L'objectif de cette analyse est de quantifier et de modéliser le dimorphisme se
 
 Les données employées sont des mesures biométriques effectuées sur différentes espèces d'Aipysurine, des serpents de mer. Ces mesures ont été réalisées depuis les spécimens conservés dans les musées. Le jeu de données utilisé dans ce rapport diffère légèrement du jeu de données initiale, le jeu modifié comprend uniquement : le genre, l'espèce, les musées, la longueur du museau-cloaque, la longueur de la queue, la largeur de la queue, la longueur de la tête, la largeur de la tête, la largeur du corps, le diamètre de l'oeil, le sexe et le stade du serpent indiquant s'il est juvénile ou adulte.
 
-Les analyses réalisées sont la régression linéaire, le modèle linéaire et le modèle linéaire généralisé. Les analyses sont effectuées à l'aide du logiciel R ( R version 4.4.1) à partir de la [SciviewsBox 2025](https://www.sciviews.org/svbox/) dans le Saturne Cloud.
+Les analyses réalisées sont la régression linéaire, le modèle linéaire et le modèle linéaire généralisé. Les analyses sont effectuées à l'aide du logiciel R ( R version 4.4.1) à partir de la [SciviewsBox 2025](https://www.sciviews.org/svbox/) dans le [Saturn Cloud](https://saturncloud.io).
 
 ## Résultats
 
